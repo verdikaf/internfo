@@ -1,0 +1,138 @@
+@import url(//fonts.googleapis.com/css?family=Quicksand);
+@import url(//fonts.googleapis.com/css?family=Lucida+Sans);
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+    background: linear-gradient(250.1deg, #5F2C82 15.4%, rgba(173, 83, 137, 0.56) 93.73%), linear-gradient(218.7deg, #000000 41.62%, #5F2C82 77.98%);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.button{
+    background-color: #1c87c9;
+         border: none;
+         color: white;
+         padding: 20px 34px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 20px;
+         margin: 4px 2px;
+         cursor: pointer;
+}
+
+.login-main-form{
+    margin-top: 10%;
+    padding: 60px;
+    color: #fff;
+}
+.login-main-form2{
+    padding: 40px;
+    color: #fff;
+}
+.form-group{
+    padding-top: 0px;
+}
+
+
+
+.btn-black{
+    background: linear-gradient(0.74deg, #6F3398 -113.84%, rgba(255, 0, 153, 0) 359.29%);
+    border-radius: 10px;
+    color: #fff;
+    width: 100%;
+}
+.btn-black:hover{
+    background: linear-gradient(0.74deg, rgb(87, 28, 129) -113.84%, rgba(255, 0, 153, 0) 359.29%);
+    border-radius: 10px;
+    color: #fff;
+    width: 100%;
+}
+
+center>h1{
+    width: 100%;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 90px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #66307D;
+}
+.img-title1{
+    width: 30%;
+    top: 359px;
+}
+
+.img-title2{
+    padding: 30px;
+    width: 70%;
+    top: 359px;
+}
