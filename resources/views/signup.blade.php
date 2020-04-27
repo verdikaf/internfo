@@ -25,7 +25,7 @@
       </div>
       <div class="main">
         <div class="login-main-form2">
-            <center><h1>Log In</h1></center>
+            <center><h1>Sign Up.</h1></center>
                 <form>
                   <div class="form-group">
                      <input type="text" class="form-control" placeholder="Email">
@@ -40,19 +40,20 @@
                      <input type="password" class="form-control" placeholder="Alamat">
                   </div>
                   <div class="form-group">
-                     <input type="password" class="form-control" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                     <input type="password" class="form-control" placeholder="Password">
+                    <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            </div>
+                    </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-9">
-                        <button type="submit" class="btn btn-black">Sign In</button>
-                    </div>
-                    <div class="col-md-3">
-                        <form action="/signup">
-                            <button type="submit" class="btn btn-black">SignUp</button>
-                        </form>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-black">Create</button>
                     </div>
                   </div>
                     

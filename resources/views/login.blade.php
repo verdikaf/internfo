@@ -24,7 +24,7 @@
    </div>
    <div class="main">
             <div class="login-main-form">
-            <center><h1>Log In</h1></center>
+            <center><h1>Log In.</h1></center>
                 <form>
                   <div class="form-group">
                      <input type="text" class="form-control" placeholder="User Name">

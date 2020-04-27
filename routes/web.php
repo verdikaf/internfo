@@ -19,3 +19,6 @@ Route::get('/', function () {
 
 Route::get('/login', 'LoginController@index');
 Route::get('/signup', 'LoginController@signup');
+
+Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
+Route::get('/dashboard/admin', 'DashboardController@admin');
