@@ -26,7 +26,7 @@ Route::get('/signup/perusahaan', 'LoginController@signupPerusahaan');
 Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
 Route::get('/dashboard/admin', 'DashboardController@admin');
 
-// CRUD PERUSAHAAN --
+// CRUD PERUSAHAAN 
 Route::get('/admin/perusahaan', 'PerusahaanController@index');
 Route::get('/admin/perusahaan/add', 'PerusahaanController@add');
 Route::get('/admin/perusahaan/add/proses', 'PerusahaanController@addProses');
