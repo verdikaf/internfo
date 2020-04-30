@@ -22,3 +22,7 @@ Route::get('/signup', 'LoginController@signup');
 
 Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
 Route::get('/dashboard/admin', 'DashboardController@admin');
+
+Route::get('lowongan/add', function () {
+    return view('lowongan_add');
+});
