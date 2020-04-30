@@ -13,4 +13,7 @@ class LoginController extends Controller
     public function signup(){
         return view('signup');
     }
+    public function signupPerusahaan(){
+        return view('signup_perusahaan');
+    }
 }
