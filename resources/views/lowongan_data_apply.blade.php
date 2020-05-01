@@ -44,60 +44,64 @@
 
         @include('header_perusahaan')
 
+
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         
-                    <p class="titles">Lowongan</p>
+                    <p class="titles">Jake Peralta</p>
                         <div class="col-sm-12 ">
 
                             <div class="container_card">
-                                <div class="card">
+                                <div class="card4">
                                     <div class="form">
                                         <form action="/action_page.php">
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Title</label>
+                                                    <label>Nama</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="name" name="name" placeholder="ex. UI/UX Designer" >
+                                                    <label class="label2">Jake Peralta</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Description</label>
+                                                    <label>TTL</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="desc" name="desc" placeholder="Write the description...">
+                                                    <label class="label2">Malang, 25 Januari 1999</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Location</label>
+                                                    <label>Alamat</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="location" name="location" placeholder="Your location...">
+                                                    <label class="label2">Jl.Mayjen Pandjaitan, Klojen, Malang</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Bidang Profesi</label>
+                                                    <label>No Telp</label>
                                                 </div>
-                                                <div class="col-75 ">
-                                                    <div class="select">
-                                                        <select id="bidang_profesi" name="bidang_profesi">
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                        </select>
-                                                    </div>
+                                                <div class="col-75">
+                                                    <label class="label2">0812546981</label>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <input type="submit" value="Add Data">
+                                                <div class="col-25">
+                                                    <label>Berkas</label>
+                                                </div>
+                                                <div class="col-25">            
+                                                    <a href="#" type="button" class="btn-white2 btn-sm">Lihat</a>
+                                                </div>
                                             </div>
+                                            <div class="row">
+                                                <a href="#" type="button" class="btn-white btn-sm">Lolos</a>
+                                                <a href="#" type="button" class="btn-white btn-sm">Tolak</a>
+                                            </div>
+                                            
                                         </form>
                                     </div>
                                 </div>

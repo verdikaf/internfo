@@ -23,6 +23,7 @@ Route::get('/signup', 'LoginController@signup');
 Route::get('/signup/perusahaan', 'LoginController@signupPerusahaan');
 
 // DASHBOAORD
+Route::get('/dashboard/perusahaan', 'DashboardController@perusahaan');
 Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
 Route::get('/dashboard/admin', 'DashboardController@admin');
 

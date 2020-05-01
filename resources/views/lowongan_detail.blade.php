@@ -44,12 +44,15 @@
 
         @include('header_perusahaan')
 
+        @foreach($lowongan as $k)
+        
+        {{ csrf_field() }}
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         
-                    <p class="titles">Lowongan</p>
+                    <p class="titles">{{ $k->job_title }}</p>
                         <div class="col-sm-12 ">
 
                             <div class="container_card">
@@ -61,15 +64,7 @@
                                                     <label>Title</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="name" name="name" placeholder="ex. UI/UX Designer" >
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>Description</label>
-                                                </div>
-                                                <div class="col-75">
-                                                    <input type="text" id="desc" name="desc" placeholder="Write the description...">
+                                                    <input type="text" id="name" name="name" value="{{ $k->job_title }}" disabled >
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -77,27 +72,23 @@
                                                     <label>Location</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="location" name="location" placeholder="Your location...">
+                                                    <input type="text" id="location" name="location" value="{{ $k->lokasi }}" disabled>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Bidang Profesi</label>
+                                                    <label>Description</label>
                                                 </div>
-                                                <div class="col-75 ">
-                                                    <div class="select">
-                                                        <select id="bidang_profesi" name="bidang_profesi">
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                        </select>
-                                                    </div>
+                                                <div class="col-75">
+                                                    <p>{{ $k->deskripsi }}</p>
+                                                    <!-- <input type="text" id="desc" name="desc" value="{{ $k->deskripsi }}" disabled> -->
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <input type="submit" value="Add Data">
+                                                <a href="/perusahaan/lowongan/pendaftar" type="button" class="btn-white btn-sm">Pendaftar</a>
+                                                <a href="#" type="button" class="btn-white btn-sm">Tutup</a>
                                             </div>
+                                            
                                         </form>
                                     </div>
                                 </div>
@@ -109,6 +100,7 @@
             </div>
         </section>
 
+        @endforeach
 
 <!--## FOOTER ##-->
         <footer id="footer" class="footer">

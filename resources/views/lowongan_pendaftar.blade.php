@@ -49,60 +49,66 @@
                 <div class="container">
                     <div class="row">
                         
-                    <p class="titles">Lowongan</p>
-                        <div class="col-sm-12 ">
+                        
+                        <div class="col-sm-6">
+                        <p class="titles">Lowongan</p>
+                        </div>
 
+                        <div class="col-sm-12 ">
                             <div class="container_card">
-                                <div class="card">
-                                    <div class="form">
+                                <div class="card3">
+                                    <div class="form2">
                                         <form action="/action_page.php">
                                             <div class="row">
-                                                <div class="col-25">
-                                                    <label>Title</label>
+                                                <div class="col-15">
+                                                    <img src="{{url('assets/images/logo/ex_layout.png')}}" alt="" class="profile">
                                                 </div>
-                                                <div class="col-75">
-                                                    <input type="text" id="name" name="name" placeholder="ex. UI/UX Designer" >
+                                                <div class="col-60">
+                                                    <label class="title_detail">JAKE PERALTA</label>
+                                                </div>
+                                                <div class="col-25">
+                                                    <a href="/perusahaan/lowongan/detail/" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
                                             </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card3">
+                                    <div class="form2">
+                                        <form action="/action_page.php">
                                             <div class="row">
-                                                <div class="col-25">
-                                                    <label>Description</label>
+                                                <div class="col-15">
+                                                    <img src="{{url('assets/images/logo/ex_layout.png')}}" alt="" class="profile">
                                                 </div>
-                                                <div class="col-75">
-                                                    <input type="text" id="desc" name="desc" placeholder="Write the description...">
+                                                <div class="col-60">
+                                                    <label class="title_detail">JAKE PERALTA</label>
+                                                </div>
+                                                <div class="col-25">
+                                                    <a href="/perusahaan/lowongan/detail/" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
                                             </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card3">
+                                    <div class="form2">
+                                        <form action="/action_page.php">
                                             <div class="row">
+                                                <div class="col-15">
+                                                    <img src="{{url('assets/images/logo/ex_layout.png')}}" alt="" class="profile">
+                                                </div>
+                                                <div class="col-60">
+                                                    <label class="title_detail">JAKE PERALTA</label>
+                                                </div>
                                                 <div class="col-25">
-                                                    <label>Location</label>
+                                                    <a href="/perusahaan/lowongan/detail/" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
-                                                <div class="col-75">
-                                                    <input type="text" id="location" name="location" placeholder="Your location...">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>Bidang Profesi</label>
-                                                </div>
-                                                <div class="col-75 ">
-                                                    <div class="select">
-                                                        <select id="bidang_profesi" name="bidang_profesi">
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <input type="submit" value="Add Data">
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
