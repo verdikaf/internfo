@@ -67,7 +67,7 @@
                                                     <label class="title_detail">JAKE PERALTA</label>
                                                 </div>
                                                 <div class="col-25">
-                                                    <a href="/perusahaan/lowongan/detail/" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                    <a href="/perusahaan/lowongan/pendaftar/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
                                             </div>
                                         </form>
@@ -84,7 +84,7 @@
                                                     <label class="title_detail">JAKE PERALTA</label>
                                                 </div>
                                                 <div class="col-25">
-                                                    <a href="/perusahaan/lowongan/detail/" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                    <a href="/perusahaan/lowongan/pendaftar/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
                                             </div>
                                         </form>
@@ -101,7 +101,7 @@
                                                     <label class="title_detail">JAKE PERALTA</label>
                                                 </div>
                                                 <div class="col-25">
-                                                    <a href="/perusahaan/lowongan/detail/" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                    <a href="/perusahaan/lowongan/pendaftar/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
                                             </div>
                                         </form>
@@ -116,31 +116,8 @@
         </section>
 
 
-<!--## FOOTER ##-->
-        <footer id="footer" class="footer">
-            <div class="container">
-                <div class="main_footer">
-                    <div class="row">
 
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="copyright_text">
-                                <p class=" wow fadeInRight" data-wow-duration="1s">Made by <a href="">Your Website</a>2016. All Rights Reserved</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-xs-12">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-        <!-- START SCROLL TO TOP  -->
-
-        <div class="scrollup">
-            <a href="#"><i class="fa fa-chevron-up"></i></a>
-        </div>
+        @include('footer_perusahaan')
 
         <script src="{{url('assets/js/vendor/jquery-1.11.2.min.js')}}"></script>
         <script src="{{url('assets/js/vendor/bootstrap.min.js')}}"></script>
