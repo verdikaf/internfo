@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Internship</a>
+            <a class="nav-link" href="#">Lowongan</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
@@ -45,7 +45,7 @@
             <center>
                     <img src="{{url('/assets/images/logo/Inferno_type_whi.png')}}" alt="" class="title"><br><br>
                     <p class="subtitle">Mari Ciptakan lapangan Pekerjaan dengan bantuan Internfo</p>
-                    <a href="/signup" type="button" class="btn btn-black">Lihat</a>
+                    <a href="/perusahaan/lowongan/add" type="button" class="btn btn-black" style="width:200px">Buat Lowongan</a>
             </center>
         </div>
       </div>

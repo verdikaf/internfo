@@ -83,6 +83,10 @@ class LoginController extends Controller
 			return redirect('/login');
 		}else {
 			return redirect('/login');
-		}
+        }
+    }
+    
+    public function signupPerusahaan(){
+        return view('signup_perusahaan');
     }
 }

@@ -17,13 +17,33 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// LOGIN
 Route::get('/login', 'LoginController@index');
 Route::post('/login/action', 'LoginController@loginAction');
 // Route::get('/signup', 'LoginController@signup');
 Route::post('/signup/action', 'LoginController@signupAction');
+Route::get('/signup/perusahaan', 'LoginController@signupPerusahaan');
 
+// DASHBOAORD
+Route::get('/dashboard/perusahaan', 'DashboardController@perusahaan');
 Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
 Route::get('/dashboard/admin', 'DashboardController@admin');
-Route::get('/dashboard/perusahaan', 'DashboardController@perusahaan');
 
 Route::get('/sign-out', 'DashboardController@signOut');
+
+
+// CRUD PERUSAHAAN 
+Route::get('/admin/perusahaan', 'PerusahaanController@index');
+Route::get('/admin/perusahaan/add', 'PerusahaanController@add');
+Route::get('/admin/perusahaan/add/proses', 'PerusahaanController@addProses');
+Route::get('/admin/perusahaan/edit/{id}', 'PerusahaanController@edit');
+Route::get('/admin/perusahaan/edit/proses', 'PerusahaanController@editProses');
+
+// CRUD LOWONGAN -- PERUSAHAAN
+Route::get('/perusahaan/lowongan', 'LowonganController@index');
+Route::get('/perusahaan/lowongan/add', 'LowonganController@add');
+Route::get('/perusahaan/lowongan/add/proses', 'LowonganController@addProses');
+Route::get('/perusahaan/lowongan/detail/{id}', 'LowonganController@detail');
+Route::get('/perusahaan/lowongan/pendaftar', 'LowonganController@pendaftar');
+Route::get('/perusahaan/lowongan/pendaftar/id', 'LowonganController@pendaftarDetail');
+
