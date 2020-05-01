@@ -32,12 +32,12 @@ Route::get('/dashboard/admin', 'DashboardController@admin');
 Route::get('/sign-out', 'DashboardController@signOut');
 
 
-// CRUD PERUSAHAAN 
-Route::get('/admin/perusahaan', 'PerusahaanController@index');
-Route::get('/admin/perusahaan/add', 'PerusahaanController@add');
-Route::get('/admin/perusahaan/add/proses', 'PerusahaanController@addProses');
-Route::get('/admin/perusahaan/edit/{id}', 'PerusahaanController@edit');
-Route::get('/admin/perusahaan/edit/proses', 'PerusahaanController@editProses');
+// // CRUD PERUSAHAAN 
+// Route::get('/admin/perusahaan', 'PerusahaanController@index');
+// Route::get('/admin/perusahaan/add', 'PerusahaanController@add');
+// Route::get('/admin/perusahaan/add/proses', 'PerusahaanController@addProses');
+// Route::get('/admin/perusahaan/edit/{id}', 'PerusahaanController@edit');
+// Route::get('/admin/perusahaan/edit/proses', 'PerusahaanController@editProses');
 
 // CRUD LOWONGAN -- PERUSAHAAN
 Route::get('/perusahaan/lowongan', 'LowonganController@index');
