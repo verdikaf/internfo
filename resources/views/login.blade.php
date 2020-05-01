@@ -89,16 +89,17 @@
                   <input type="password" class="form-control" name="password" placeholder="Password" required v-model="password">
                </div>
                <div class="form-group">
-                  <!-- <div class="input-group">
-                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupFileAddon01">Foto</span>
-                     </div>
-                     <div class="custom-file">
-                        <input type="file" name="file" class="form-control">
-                     </div>
-                  </div> -->
-                  <input type="file" name="file">
-               </div>
+                    <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
+                                aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            </div>
+                    </div>
+                  </div>
                <div class="row">
                   <div class="col-md-12">
                         <button type="submit" class="btn btn-black">Register</button>
