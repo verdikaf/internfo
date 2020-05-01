@@ -339,8 +339,8 @@ img {
 .btn-black:hover{
     border: 3px solid rgb(255, 0, 234);
 }
-.btn-add{
-    background: linear-gradient(88.59deg, #5F2C82 -4.62%, rgb(97, 45, 131) 185.84%);
+.btn-add {
+    background: linear-gradient(88.59deg, #fb00ff -4.62%, rgb(76, 0, 125) 185.84%);
     box-sizing: border-box;
     border-radius: 10px;
     color: #fff;
@@ -348,16 +348,22 @@ img {
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     display: inline-block;
     float: right;
     padding: .4em;
     letter-spacing: 1px;
     margin: 0;
+    margin-right: 40px;
     margin-top: 150px;
+    text-align: center;
+    vertical-align: middle;
+    transition: .5s; 
 }
+
 .btn-add:hover{
-    color: rgb(234, 0, 255);
+    background: linear-gradient(88.59deg, #ba00bd -4.62%, rgb(45, 0, 75) 185.84%);
+    color: #fff;
 }
 
 .btn-white{

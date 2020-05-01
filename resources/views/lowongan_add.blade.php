@@ -55,29 +55,29 @@
                             <div class="container_card">
                                 <div class="card">
                                     <div class="form">
-                                        <form action="/action_page.php">
+                                        <form action="#">
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Title</label>
+                                                    <label>Nama Pekerjaan</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="name" name="name" placeholder="ex. UI/UX Designer" >
+                                                    <input type="text" id="job_title" name="job_title" placeholder="ex. UI/UX Designer" >
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Description</label>
+                                                    <label>Deskripsi</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="desc" name="desc" placeholder="Write the description...">
+                                                    <input type="text" id="deskripsi" name="deskripsi" placeholder="Tulis Deskripsi...">
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Location</label>
+                                                    <label>Lokasi</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="location" name="location" placeholder="Your location...">
+                                                    <input type="text" id="lokasi" name="lokasi" placeholder="Lokasi Kerja...">
                                                 </div>
                                             </div>
                                             <div class="row">

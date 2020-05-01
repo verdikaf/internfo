@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Lowongan</a>
+            <a class="nav-link" href="/perusahaan/lowongan">Lowongan</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
@@ -63,7 +63,7 @@
       </div>
       <div class="col-md-6 mb-5">
             <img src="{{url('/assets/images/logo/tentang.png')}}" alt="" class="title3"><br><br>
-            <a href="/signup" type="button" class="btn btn-black2">About Us</a>
+            <a href="#" type="button" class="btn btn-black2">About Us</a>
       </div>
     </div>
   </div>
