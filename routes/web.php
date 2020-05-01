@@ -18,7 +18,12 @@ Route::get('/', function () {
 });
 
 Route::get('/login', 'LoginController@index');
-Route::get('/signup', 'LoginController@signup');
+Route::post('/login/action', 'LoginController@loginAction');
+// Route::get('/signup', 'LoginController@signup');
+Route::post('/signup/action', 'LoginController@signupAction');
 
 Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
 Route::get('/dashboard/admin', 'DashboardController@admin');
+Route::get('/dashboard/perusahaan', 'DashboardController@perusahaan');
+
+Route::get('/sign-out', 'DashboardController@signOut');

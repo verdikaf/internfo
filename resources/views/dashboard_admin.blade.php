@@ -27,7 +27,10 @@
             <a class="nav-link" href="#">Perusahaan</a>
           </li>
           <li class="nav-item">
-            <a href="#" type="button" class="btn btn-logout">Logout</a>
+            <a class="nav-link" href="#">{{$session['nama']}}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url('/sign-out')}}" type="button" class="btn btn-logout">Logout</a>
           </li>
         </ul>
       </div>
