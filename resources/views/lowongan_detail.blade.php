@@ -61,35 +61,27 @@
                                         <form action="/action_page.php">
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Nama Pekerjaan</label>
+                                                    <label>Title</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="job_title" name="job_title" value="{{ $k->job_title }}" disabled >
+                                                    <input type="text" id="name" name="name" value="{{ $k->job_title }}" disabled >
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Lokasi Kerja</label>
+                                                    <label>Location</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="lokasi" name="lokasi" value="{{ $k->lokasi }}" disabled>
+                                                    <input type="text" id="location" name="location" value="{{ $k->lokasi }}" disabled>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Deskripsi</label>
+                                                    <label>Description</label>
                                                 </div>
                                                 <div class="col-75">
                                                     <p>{{ $k->deskripsi }}</p>
                                                     <!-- <input type="text" id="desc" name="desc" value="{{ $k->deskripsi }}" disabled> -->
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>Bidang Profesi</label>
-                                                </div>
-                                                <div class="col-75">
-                                                    <input type="text" id="bidang_profesi" name="bidang_profesi" value="Designer" disabled>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -110,7 +102,31 @@
 
         @endforeach
 
-        @include('footer_perusahaan')
+<!--## FOOTER ##-->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="main_footer">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="copyright_text">
+                                <p class=" wow fadeInRight" data-wow-duration="1s">Made by <a href="">Your Website</a>2016. All Rights Reserved</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- START SCROLL TO TOP  -->
+
+        <div class="scrollup">
+            <a href="#"><i class="fa fa-chevron-up"></i></a>
+        </div>
 
         <script src="{{url('assets/js/vendor/jquery-1.11.2.min.js')}}"></script>
         <script src="{{url('assets/js/vendor/bootstrap.min.js')}}"></script>

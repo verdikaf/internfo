@@ -53,14 +53,14 @@
                         <div class="col-sm-6">
                         <p class="titles">Lowongan</p>
                         </div>
-                        <div class="col-sm-6"><a href="/perusahaan/lowongan/add" type="button" class="btn-add btn-sm">Tambah</a></div>
+                        <div class="col-sm-6"><a href="#" type="button" class="btn-add btn-sm">Tambah</a></div>
 
                         <div class="col-sm-12 ">
                         @foreach($lowongan as $k)
                             <div class="container_card">
                                 <div class="card2">
                                     <div class="form">
-                                        <form>
+                                        <form action="/action_page.php">
                                             <div class="row">
                                                 <div class="col-75">
                                                     <label class="title_detail">{{ $k->job_title }}</label>
@@ -81,8 +81,32 @@
             </div>
         </section>
 
-        @include('footer_perusahaan')
 
+<!--## FOOTER ##-->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="main_footer">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="copyright_text">
+                                <p class=" wow fadeInRight" data-wow-duration="1s">Made by <a href="">Your Website</a>2016. All Rights Reserved</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xs-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- START SCROLL TO TOP  -->
+
+        <div class="scrollup">
+            <a href="#"><i class="fa fa-chevron-up"></i></a>
+        </div>
 
         <script src="{{url('assets/js/vendor/jquery-1.11.2.min.js')}}"></script>
         <script src="{{url('assets/js/vendor/bootstrap.min.js')}}"></script>
