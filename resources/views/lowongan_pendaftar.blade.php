@@ -64,7 +64,7 @@
                                                     <img src="{{url('assets/images/logo/ex_layout.png')}}" alt="" class="profile">
                                                 </div>
                                                 <div class="col-60">
-                                                    <label class="title_detail">JAKE PERALTA</label>
+                                                    <label class="title_detail2">JAKE PERALTA</label>
                                                 </div>
                                                 <div class="col-25">
                                                     <a href="/perusahaan/lowongan/pendaftar/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
@@ -81,7 +81,7 @@
                                                     <img src="{{url('assets/images/logo/ex_layout.png')}}" alt="" class="profile">
                                                 </div>
                                                 <div class="col-60">
-                                                    <label class="title_detail">JAKE PERALTA</label>
+                                                    <label class="title_detail2">JAKE PERALTA</label>
                                                 </div>
                                                 <div class="col-25">
                                                     <a href="/perusahaan/lowongan/pendaftar/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
@@ -98,7 +98,7 @@
                                                     <img src="{{url('assets/images/logo/ex_layout.png')}}" alt="" class="profile">
                                                 </div>
                                                 <div class="col-60">
-                                                    <label class="title_detail">JAKE PERALTA</label>
+                                                    <label class="title_detail2">JAKE PERALTA</label>
                                                 </div>
                                                 <div class="col-25">
                                                     <a href="/perusahaan/lowongan/pendaftar/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>

@@ -26,7 +26,7 @@ Route::get('/signup/perusahaan', 'LoginController@signupPerusahaan');
 
 Route::get('/sign-out', 'DashboardController@signOut');
 
-// DASHBOAORD
+// DASHBOARD
 Route::get('/dashboard/perusahaan', 'DashboardController@perusahaan');
 Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
 Route::get('/dashboard/admin', 'DashboardController@admin');
@@ -48,3 +48,20 @@ Route::get('/perusahaan/lowongan/pendaftar/detail', 'LowonganController@pendafta
 // Route::get('/admin/perusahaan/add/proses', 'PerusahaanController@addProses');
 // Route::get('/admin/perusahaan/edit/{id}', 'PerusahaanController@edit');
 // Route::get('/admin/perusahaan/edit/proses', 'PerusahaanController@editProses');
+
+// PEMAGANG
+Route::get('/pemagang/internship-list', function () {
+    return view('pemagang_internship_list');
+});
+Route::get('/pemagang/internship-detail', function () {
+    return view('pemagang_internship_detail');
+});
+Route::get('/pemagang/internship-requirements', function () {
+    return view('pemagang_internship_requirements');
+});
+Route::get('/pemagang/internship-notification', function () {
+    return view('pemagang_internship_notifikasi');
+});
+Route::get('/pemagang/detail-notification', function () {
+    return view('pemagang_internship_detailnotif');
+});

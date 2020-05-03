@@ -51,29 +51,33 @@
                         
                         
                         <div class="col-sm-6">
-                        <p class="titles">Lowongan</p>
+                        <p class="titles">Internship</p>
                         </div>
-                        <div class="col-sm-6"><a href="/perusahaan/lowongan/add" type="button" class="btn-add btn-sm">Tambah</a></div>
+                        
 
                         <div class="col-sm-12 ">
-                        @foreach($lowongan as $k)
+                        
                             <div class="container_card">
                                 <div class="card2">
                                     <div class="form">
                                         <form>
                                             <div class="row">
-                                                <div class="col-75">
-                                                    <label class="title_detail2">{{ $k->job_title }}</label>
+                                                <div class="col-25">
+                                                    <img src="{{url('assets/images/logo/Inferno_logo.png')}}" alt="Avatar" style="width:30%">
+                                                </div>
+                                                <div class="col-50">
+                                                    <label class="title_intern">UI/UX Designer</label>
+                                                    <h4 class="title_company">PT OKEBOS</h4>
                                                 </div>
                                                 <div class="col-25">
-                                                    <a href="/perusahaan/lowongan/detail/{{ $k->id }}" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                    <a href="/pemagang/internship-detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+         
 
                         </div>
                     </div>

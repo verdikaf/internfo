@@ -44,45 +44,48 @@
 
         @include('header_perusahaan')
 
+
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         
-                        
-                        <div class="col-sm-6">
-                        <p class="titles">Lowongan</p>
-                        </div>
-                        <div class="col-sm-6"><a href="/perusahaan/lowongan/add" type="button" class="btn-add btn-sm">Tambah</a></div>
-
+                    <p class="titles">UI/UX Designer</p>
                         <div class="col-sm-12 ">
-                        @foreach($lowongan as $k)
+
                             <div class="container_card">
-                                <div class="card2">
+                                <div class="card4">
                                     <div class="form">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-75">
-                                                    <label class="title_detail2">{{ $k->job_title }}</label>
-                                                </div>
-                                                <div class="col-25">
-                                                    <a href="/perusahaan/lowongan/detail/{{ $k->id }}" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
-                                                </div>
+                                        
+                                        <div class="row mt-4">
+                                            <div class="col-md-6">
+                                                <label class="title_company">Berkas</label><br>
+                                                <label class="title_company">Portofolio</label>
                                             </div>
-                                        </form>
+                                            <div class="col-md-6">
+                                                <input type="file" nama="file">
+                                                <input type="file" nama="file">
+                                            </div>
+                                            <br>
+                                            
+                                        </div>
+                                        <div class="row">
+                                                <a href="{{url('/pemagang/internship-requirements')}}"><input type="submit" value="SEND"></a>
+                                            </div>
                                     </div>
+                                    
                                 </div>
                             </div>
-                        @endforeach
-
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        @include('footer_perusahaan')
 
+
+        @include('footer_perusahaan')
 
         <script src="{{url('assets/js/vendor/jquery-1.11.2.min.js')}}"></script>
         <script src="{{url('assets/js/vendor/bootstrap.min.js')}}"></script>

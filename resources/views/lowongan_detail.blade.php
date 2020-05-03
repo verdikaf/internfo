@@ -59,39 +59,38 @@
                                 <div class="card">
                                     <div class="form">
                                         <form action="/action_page.php">
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>Nama Pekerjaan</label>
-                                                </div>
-                                                <div class="col-75">
-                                                    <input type="text" id="job_title" name="job_title" value="{{ $k->job_title }}" disabled >
-                                                </div>
+                                        <div class="row mb-4">
+                                            <div class="col-md-6">
+                                                <label class="title_intern">{{ $k->job_title }}</label>
+                                                <p style="font-family: Quicksand; font-size: 20px; margin-top: -15px;">{{$k->lokasi}}</p>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>Lokasi Kerja</label>
-                                                </div>
-                                                <div class="col-75">
-                                                    <input type="text" id="lokasi" name="lokasi" value="{{ $k->lokasi }}" disabled>
-                                                </div>
+                                            <div class="col-md-6 text-right">
+                                                <img src="{{url('/assets/images/logo/Inferno_logo.png')}}" width="100">
                                             </div>
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>Deskripsi</label>
-                                                </div>
-                                                <div class="col-75">
-                                                    <p>{{ $k->deskripsi }}</p>
-                                                    <!-- <input type="text" id="desc" name="desc" value="{{ $k->deskripsi }}" disabled> -->
-                                                </div>
+                                        </div>
+
+                                        <hr style="border: 1px solid #ed145b;">
+
+                                        <div class="row mt-4">
+                                            <div class="col-md-6">
+                                                <label class="title_company">Job Description</label>
+                                                <table>
+                                                    <tr>
+                                                        <td>{{$k->deskripsi}}</td>
+                                                    </tr>
+                                                </table>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>Bidang Profesi</label>
-                                                </div>
-                                                <div class="col-75">
-                                                    <input type="text" id="bidang_profesi" name="bidang_profesi" value="Designer" disabled>
-                                                </div>
+                                            <div class="col-md-6">
+                                                <label class="title_company">Jurusan</label>
+                                                <table>
+                                                    <tr>
+                                                        <td>Sistem Informasi</td>
+                                                    </tr>
+                                                </table>
                                             </div>
+                                            <br>
+                                            
+                                        </div>
                                             <div class="row">
                                                 <a href="/perusahaan/lowongan/pendaftar" type="button" class="btn-white btn-sm">Pendaftar</a>
                                                 <a href="#" type="button" class="btn-white btn-sm">Tutup</a>

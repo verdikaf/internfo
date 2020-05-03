@@ -44,45 +44,56 @@
 
         @include('header_perusahaan')
 
+
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         
-                        
-                        <div class="col-sm-6">
-                        <p class="titles">Lowongan</p>
-                        </div>
-                        <div class="col-sm-6"><a href="/perusahaan/lowongan/add" type="button" class="btn-add btn-sm">Tambah</a></div>
-
+                    <p class="titles">Notification</p>
                         <div class="col-sm-12 ">
-                        @foreach($lowongan as $k)
+
                             <div class="container_card">
-                                <div class="card2">
+                                <div class="card4">
                                     <div class="form">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-75">
-                                                    <label class="title_detail2">{{ $k->job_title }}</label>
-                                                </div>
-                                                <div class="col-25">
-                                                    <a href="/perusahaan/lowongan/detail/{{ $k->id }}" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
-                                                </div>
+                                        <div class="row mb-4">
+                                            <center><label class="title_intern">Pengumuman Tahap Administrasi</label></center>
+                                        </div>
+
+                                        <hr style="border: 1px solid #ed145b;">
+
+                                        <div class="row mt-4">
+                                            <div class="col-md-10">
+                                            <p style="font-family: Quicksand; font-size: 20px;">Kepada Yth.</p>
+                                                <label class="title_company">Esmeralda Wahyuni</label><br><br><br>
+                                                <table>
+                                                    <tr>
+                                                    <td style="font-size: 20px;">Selamat atas lolosnya tahap administrasi. 
+                                                        Berikut kami cantumkan link tes teknis agar saudara kerjakan semaksimal mungkin</td>
+                                                    </tr>
+                                                </table>
                                             </div>
-                                        </form>
+                                            <br>
+                                            
+                                        </div><br><br>
+                                        <div class="row">
+                                                <center><a href="">http://bit.ly/tesTeknis2020Internship</a></center>
+                                              
+                                            </div>
                                     </div>
+                                    
                                 </div>
                             </div>
-                        @endforeach
-
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        @include('footer_perusahaan')
 
+
+        @include('footer_perusahaan')
 
         <script src="{{url('assets/js/vendor/jquery-1.11.2.min.js')}}"></script>
         <script src="{{url('assets/js/vendor/bootstrap.min.js')}}"></script>
