@@ -14,6 +14,7 @@
     <script src="{{url('/assets/library/vue/vue.js')}}"></script> -->
 </head>
 <body>
+
    <div id="dw">
       <div class="sidenav">
             <div class="login-main-text">
@@ -24,15 +25,8 @@
                </center>          
             </div>
       </div>
+     
       <div class="main">
-         <div class="card">
-            <div class="form-group">
-               <input type="radio"  value="1" v-model="type"> Daftar </input>
-               <input type="radio" v-model="type" value="0" > Login </input>
-            </div>
-         </div>
-      </div>
-      <div class="main" v-if="type == 0">
          <div class="login-main-form">
             <center><h1>Log In.</h1></center>
             <form action="{{url('/login/action')}}" method="POST">
@@ -52,61 +46,12 @@
                   </select>
                </div>
                <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-9">
                         <button type="submit" class="btn btn-black">Sign In</button>
                   </div>
-                  <!-- <div class="col-md-3">
-                        <a href="{{url('/signup')}}" type="button" class="btn btn-black">Register</a>
-                  </div> -->
-               </div>
-            </form>
-         </div>
-      </div>
-      <div class="main" v-if="type == 1">
-         <div class="login-main-form2">
-            <center><h1>Register Pelamar.</h1></center>
-            <form action="{{url('/signup/action')}}" method="POST" enctype="multipart/form-data">
-               <input type="hidden" name="_token" value="{{csrf_token()}}">
-               <div class="form-group">
-                  <input type="text" class="form-control" name="nama" placeholder="Nama" required v-model="nama">
-               </div>
-               <div class="form-group">
-                  <input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat lahir" required v-model="tampat_lahir">
-               </div>
-               <div class="form-group">
-                  <input type="date" class="form-control" name="tgl_lahir" placeholder="Tanggal lahir" required v-model="tgl_lahir">
-               </div>
-               <div class="form-group">
-                  <input type="text" class="form-control" name="alamat" placeholder="Alamat" required v-model="alamat">
-               </div>
-               <div class="form-group">
-                  <input type="number" class="form-control" name="telp" placeholder="Telepon" required v-model="telp">
-               </div>
-               <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required v-model="email">
-               </div>
-               <div class="form-group">
-                  <input type="password" class="form-control" name="password" placeholder="Password" required v-model="password">
-               </div>
-               <div class="form-group">
-                    <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                            </div>
-                            <div class="custom-file">
-                                <input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
-                                aria-describedby="inputGroupFileAddon01">
-                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                            </div>
-                    </div>
+                  <div class="col-md-3">
+                        <a href="{{url('/signup')}}" type="button" class="btn btn-black">Sign Up</a>
                   </div>
-               <div class="row">
-                  <div class="col-md-12">
-                        <button type="submit" class="btn btn-black">Register</button>
-                  </div>
-                  <!-- <div class="col-md-3">
-                        <a href="{{url('/login')}}" type="button" class="btn btn-black">Login</a>
-                  </div> -->
                </div>
             </form>
          </div>

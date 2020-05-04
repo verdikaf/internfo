@@ -501,6 +501,23 @@ img {
     background-color: rgb(31, 0, 51);
     color: #fff;
 }
+
+/* CARD5 for PENDAFTAR LOLOS */
+.card5 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 1120px;
+    height: 270px;
+    float: left;
+    margin: 10px 10px 50px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff; 
+}
+
+
+
+
 /* FORM */
 input[type=text], select, textarea {
   width: 100%;

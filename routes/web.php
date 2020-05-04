@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/admin/{any}', function () {
+//     return view('welcome');
+// })->where('any','.*');
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,9 +23,11 @@ Route::get('/', function () {
 // LOGIN
 Route::get('/login', 'LoginController@index');
 Route::post('/login/action', 'LoginController@loginAction');
-// Route::get('/signup', 'LoginController@signup');
-Route::post('/signup/action', 'LoginController@signupAction');
-Route::get('/signup/perusahaan', 'LoginController@signupPerusahaan');
+
+// SIGNUP
+Route::get('/signup', 'LoginController@signup');
+Route::post('/signup/pelamar/action', 'LoginController@signupPelamarAction');
+Route::post('/signup/perusahaan/action', 'LoginController@signupPerusahaanAction');
 
 Route::get('/sign-out', 'DashboardController@signOut');
 
@@ -38,6 +43,7 @@ Route::get('/perusahaan/lowongan/add/proses', 'LowonganController@addProses');
 Route::get('/perusahaan/lowongan/detail/{id}', 'LowonganController@detail');
 Route::get('/perusahaan/lowongan/pendaftar', 'LowonganController@pendaftar');
 Route::get('/perusahaan/lowongan/pendaftar/detail', 'LowonganController@pendaftarDetail');
+Route::get('/perusahaan/lowongan/pendaftar/lolos', 'LowonganController@pendaftarLolos');
 
 
 

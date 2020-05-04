@@ -29,5 +29,8 @@ class LowonganController extends Controller
     public function pendaftarDetail(){
         return view('lowongan_data_apply');
     }
+    public function pendaftarLolos(){
+        return view('lowongan_pendaftar_lolos');
+    }
     
 }

@@ -33,6 +33,11 @@ class LoginController extends Controller
                     $request->input('email'),
                     $request->input('password')
                 ]);
+            } else{
+                echo "<script>";
+                echo "alert('Hak Akses Salah');";
+                echo "</script>";
+                return redirect('/login');
             }
 
             if($result != null) {
@@ -50,7 +55,7 @@ class LoginController extends Controller
                     return redirect('/dashboard/admin');
                 }
             }else {
-                // return redirect('/login');
+                return redirect('/login');
             }
         }else {
             return redirect('/login');
@@ -61,7 +66,7 @@ class LoginController extends Controller
         return view('signup');
     }
 
-    public function signupAction(Request $request){
+    public function signupPelamarAction(Request $request){
         $method = $request->method();
 		if ($method == "POST") {
 			$directory = 'assets/images/profil';
@@ -86,7 +91,26 @@ class LoginController extends Controller
         }
     }
     
-    public function signupPerusahaan(){
-        return view('signup_perusahaan');
+    public function signupPerusahaanAction(Request $request){
+        $method = $request->method();
+		if ($method == "POST") {
+			$directory = 'assets/images/profil';
+            $file = $request->file('file');
+            echo $file;
+			$file->move($directory, $file->getClientOriginalName());
+
+			DB::insert("INSERT INTO perusahaan (foto,nama,alamat,deskripsi,email,password) VALUES (?, ?, ?, ?, ?, ?)", 
+			[
+				$directory."/".$file->getClientOriginalName(),
+				$request->input('nama'),
+                $request->input('alamat'),
+                $request->input('deskripsi'),
+                $request->input('email'),
+                $request->input('password')
+			]);
+			return redirect('/login');
+		}else {
+			return redirect('/login');
+        }
     }
 }

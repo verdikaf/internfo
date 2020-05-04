@@ -50,11 +50,11 @@
                 <div class="container">
                     <div class="row">
                         
-                    <p class="titles">Jake Peralta</p>
+                    <p class="titles">Lolos</p>
                         <div class="col-sm-12 ">
 
                             <div class="container_card">
-                                <div class="card4">
+                                <div class="card5">
                                     <div class="form">
                                         <form action="/action_page.php">
                                             <div class="row">
@@ -64,50 +64,25 @@
                                                 <div class="col-75">
                                                     <label class="label2">Jake Peralta</label>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>TTL</label>
-                                                </div>
-                                                <div class="col-75">
-                                                    <label class="label2">Malang, 25 Januari 1999</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>Alamat</label>
-                                                </div>
-                                                <div class="col-75">
-                                                    <label class="label2">Jl.Mayjen Pandjaitan, Klojen, Malang</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
+                                            </div>  
+                                            <!-- <div class="row">
                                                 <div class="col-25">
                                                     <label>No Telp</label>
                                                 </div>
                                                 <div class="col-75">
                                                     <label class="label2">0812546981</label>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <label>Berkas</label>
+                                                    <label>Link</label>
                                                 </div>
                                                 <div class="col-25">            
-                                                    <a href="#" type="button" class="btn-white2 btn-sm">Lihat</a>
+                                                    <input type="text" id="link" name="link" placeholder="Link Test Tahap Berikutnya...">
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-25">
-                                                    <label>Portofolio</label>
-                                                </div>
-                                                <div class="col-25">            
-                                                    <a href="#" type="button" class="btn-white2 btn-sm">Lihat</a>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <a href="#" type="button" class="btn-white btn-sm">Lolos</a>
-                                                <a href="#" type="button" class="btn-white btn-sm">Tolak</a>
+                                                <a href="#" type="button" class="btn-white btn-sm">Kirim</a>
                                             </div>
                                             
                                         </form>
