@@ -39,14 +39,11 @@ Route::get('/dashboard/admin', 'DashboardController@admin');
 // CRUD LOWONGAN -- PERUSAHAAN
 Route::get('/perusahaan/lowongan', 'LowonganController@index');
 Route::get('/perusahaan/lowongan/add', 'LowonganController@add');
-Route::get('/perusahaan/lowongan/add/proses', 'LowonganController@addProses');
+Route::post('/perusahaan/lowongan/add/proses', 'LowonganController@addProses');
 Route::get('/perusahaan/lowongan/detail/{id}', 'LowonganController@detail');
 Route::get('/perusahaan/lowongan/pendaftar', 'LowonganController@pendaftar');
 Route::get('/perusahaan/lowongan/pendaftar/detail', 'LowonganController@pendaftarDetail');
 Route::get('/perusahaan/lowongan/pendaftar/lolos', 'LowonganController@pendaftarLolos');
-
-
-
 
 // // CRUD PERUSAHAAN 
 // Route::get('/admin/perusahaan', 'PerusahaanController@index');
