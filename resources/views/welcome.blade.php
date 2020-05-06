@@ -5,7 +5,7 @@
     <script src="{{ mix('js/app.js') }}" type="text/javascript" defer></script>
 </head>
 
-<body style='background-color: white'>
+<body style='background-color: red'>
     <div id="app">
     </div>
 </body>

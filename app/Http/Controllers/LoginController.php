@@ -53,7 +53,7 @@ class LoginController extends Controller
                 } elseif ($request->input('hak_akses') == 2) {
                     return redirect('/dashboard/perusahaan');
                 } elseif ($request->input('hak_akses') == 3) {
-                    return redirect('/dashboard/admin');
+                    return redirect('/dashboard/admin/{any}');
                 }
             }else {
                 return redirect('/login');
