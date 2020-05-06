@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class bidangProfesi extends Model
+class BidangProfesi extends Model
 {
     protected $table = 'bidang_profesi';
     protected $fillable = ['nama'];

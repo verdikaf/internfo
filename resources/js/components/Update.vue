@@ -9,11 +9,11 @@
         <!-- prevent form submit untuk reload halaman, kemudian memanggil function updateData() -->
         <form @submit.prevent="updateData()">
           <div class="form-group">
-            <label>First name</label>
+            <label>Name</label>
             <input
               type="textfield"
               class="form-control"
-              placeholder="Masukan nama"
+              placeholder="Input your first name"
               v-model="form.nama"
               required
             >
@@ -42,7 +42,7 @@ export default {
     loadData() {
       // load data berdasarkan id
       axios
-        .get("http://localhost:8000/api/bidangProfesi/" + this.$route.params.id)
+        .get("http://localhost:8000/api/bidangprofesi/" + this.$route.params.id)
         .then(response => {
           // post value yang dari response ke form
           this.form.nama = response.data.nama;
@@ -51,7 +51,7 @@ export default {
     updateData() {
       // put data ke api menggunakan axios
       axios
-        .put("http://localhost:8000/api/bidangProfesi/" + this.$route.params.id, {
+        .put("http://localhost:8000/api/bidangprofesi/" + this.$route.params.id, {
           nama: this.form.nama
         })
         .then(response => {
@@ -62,4 +62,3 @@ export default {
   }
 };
 </script>
-

@@ -42,51 +42,57 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        @include('header_perusahaan')
+        @include('header_pemagang')
+
 
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         
-                        
-                        <div class="col-sm-6">
-                        <p class="titles">Internship</p>
-                        </div>
-                        
-
+                    <p class="titles">Attachment</p>
                         <div class="col-sm-12 ">
-                        
+
                             <div class="container_card">
-                                <div class="card2">
+                                <div class="card6">
                                     <div class="form">
-                                        <form>
-                                            <div class="row">
+                                        
+                                        <div class="row">
                                                 <div class="col-25">
-                                                    <img src="{{url('assets/images/logo/Inferno_logo.png')}}" alt="Avatar" style="width:30%">
+                                                    <label class="label-pemagang">Berkas</label>
                                                 </div>
-                                                <div class="col-50">
-                                                    <label class="title_intern">UI/UX Designer</label>
-                                                    <h4 class="title_company">PT OKEBOS</h4>
+                                                <div class="col-75">
+                                                    <input type="file" id="berkas" name="berkas"><br>
+                                                    <p class="keterangan">*Masukan Berkas CV & KHS dalam satu file.</p>
                                                 </div>
+                                        </div>
+                                        <div class="row">
                                                 <div class="col-25">
-                                                    <a href="/pemagang/internship-detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                    <label class="label-pemagang">Portofolio</label>
                                                 </div>
-                                            </div>
-                                        </form>
+                                                <div class="col-75">
+                                                    <input type="file" id="berkas" name="berkas"><br>
+                                                    <p class="keterangan">*Masukan Portofolio dalam satu file.</p>
+                                                </div>
+                                        </div>
+
+                                        <div class="row">
+                                                <a href="{{url('/pemagang/internship-requirements')}}"><input type="submit" value="SEND"></a>
+                                        </div>
                                     </div>
+                                    
                                 </div>
                             </div>
-         
-
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        @include('footer_perusahaan')
 
+
+        @include('footer_perusahaan')
 
         <script src="{{url('assets/js/vendor/jquery-1.11.2.min.js')}}"></script>
         <script src="{{url('assets/js/vendor/bootstrap.min.js')}}"></script>

@@ -455,12 +455,14 @@ class ComposerStaticInit424ba0805ff1a31bbf1cf409d1cbfc6f
     );
 
     public static $classMap = array (
+        'App\\BidangProfesi' => __DIR__ . '/../..' . '/app/BidangProfesi.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
         'App\\Http\\Controllers\\LowonganController' => __DIR__ . '/../..' . '/app/Http/Controllers/LowonganController.php',
+        'App\\Http\\Controllers\\PemagangController' => __DIR__ . '/../..' . '/app/Http/Controllers/PemagangController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',

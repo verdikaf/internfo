@@ -1899,6 +1899,39 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Create.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Create.vue?vue&type=script&lang=js& ***!
@@ -1908,6 +1941,7 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -1948,7 +1982,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // post data ke api menggunakan axios
-      axios.post("http://localhost:8000/api/bidangProfesi", {
+      axios.post("http://localhost:8000/api/bidangprofesi", {
         nama: this.form.nama
       }).then(function (response) {
         // push router ke read data
@@ -2007,10 +2041,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      bidang_profesis: []
+      // variable array yang akan menampung hasil fetch dari api
+      bidang_profesi: []
     };
   },
   created: function created() {
@@ -2020,14 +2058,17 @@ __webpack_require__.r(__webpack_exports__);
     loadData: function loadData() {
       var _this = this;
 
-      axios.get("http://localhost:8000/api/bidangProfesi").then(function (response) {
-        _this.bidang_profesis = response.data;
+      // fetch data dari api menggunakan axios
+      axios.get("http://localhost:8000/api/bidangprofesi").then(function (response) {
+        // mengirim data hasil fetch ke varibale array persons
+        _this.bidangprofesi = response.data;
       });
     },
     deleteData: function deleteData(id) {
       var _this2 = this;
 
-      axios["delete"]("http://localhost:8000/api/bidangProfesi/" + id).then(function (response) {
+      // delete data
+      axios["delete"]("http://localhost:8000/api/bidangprofesi/" + id).then(function (response) {
         _this2.loadData();
       });
     }
@@ -2089,7 +2130,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       // load data berdasarkan id
-      axios.get("http://localhost:8000/api/bidangProfesi/" + this.$route.params.id).then(function (response) {
+      axios.get("http://localhost:8000/api/bidangprofesi/" + this.$route.params.id).then(function (response) {
         // post value yang dari response ke form
         _this.form.nama = response.data.nama;
       });
@@ -2098,7 +2139,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // put data ke api menggunakan axios
-      axios.put("http://localhost:8000/api/bidangProfesi/" + this.$route.params.id, {
+      axios.put("http://localhost:8000/api/bidangprofesi/" + this.$route.params.id, {
         nama: this.form.nama
       }).then(function (response) {
         // push router ke read data
@@ -19722,9 +19763,75 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [_c("router-view")], 1)
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "nav",
+        { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
+        [
+          _c("div", { staticClass: "collapse navbar-collapse" }, [
+            _c(
+              "div",
+              { staticClass: "navbar-nav" },
+              [
+                _c(
+                  "router-link",
+                  { staticClass: "nav-item nav-link", attrs: { to: "/" } },
+                  [_vm._v("Home")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-item nav-link",
+                    attrs: { to: "/create" }
+                  },
+                  [_vm._v("Add")]
+                )
+              ],
+              1
+            )
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-view")
+    ],
+    1
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "text-center",
+        staticStyle: { margin: "20px 0px 20px 0px" }
+      },
+      [
+        _c(
+          "a",
+          { attrs: { href: "https://www.mynotepaper.com/", target: "_blank" } },
+          [_c("img", { attrs: { src: "https://i.imgur.com/hHZjfUq.png" } })]
+        ),
+        _c("br"),
+        _vm._v(" "),
+        _c("span", { staticClass: "text-secondary" }, [
+          _vm._v("Laravel & Vue CRUD Single Page Application (SPA) Tutorial")
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -19769,7 +19876,7 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "form-group" }, [
-              _c("label", [_vm._v("Nama Bidang Profesi ")]),
+              _c("label", [_vm._v("First name")]),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -19783,7 +19890,7 @@ var render = function() {
                 staticClass: "form-control",
                 attrs: {
                   type: "textfield",
-                  placeholder: "Masukan nama",
+                  placeholder: "Input your first name",
                   required: ""
                 },
                 domProps: { value: _vm.form.nama },
@@ -19861,10 +19968,10 @@ var render = function() {
           _vm._v(" "),
           _c(
             "tbody",
-            _vm._l(_vm.bidang_profesis, function(bidang_profesi) {
-              return _c("tr", { key: bidang_profesi.id }, [
+            _vm._l(_vm.bidang_profesi, function(bidangprofesi) {
+              return _c("tr", { key: bidangprofesi.id }, [
                 _c("td", { staticStyle: { width: "40%" } }, [
-                  _vm._v(_vm._s(bidang_profesi.nama))
+                  _vm._v(_vm._s(bidangprofesi.nama))
                 ]),
                 _vm._v(" "),
                 _c(
@@ -19875,7 +19982,7 @@ var render = function() {
                       "router-link",
                       {
                         staticClass: "btn btn-warning",
-                        attrs: { to: "/detail/" + bidang_profesi.id }
+                        attrs: { to: "/detail/" + bidangprofesi.id }
                       },
                       [_vm._v("Update")]
                     ),
@@ -19886,7 +19993,7 @@ var render = function() {
                         staticClass: "btn btn-danger",
                         on: {
                           click: function($event) {
-                            return _vm.deleteData(bidang_profesi.id)
+                            return _vm.deleteData(bidangprofesi.id)
                           }
                         }
                       },
@@ -19920,8 +20027,6 @@ var staticRenderFns = [
     return _c("thead", [
       _c("tr", [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("First")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Last")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Action")])
       ])
@@ -19972,7 +20077,7 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "form-group" }, [
-              _c("label", [_vm._v("First name")]),
+              _c("label", [_vm._v("Name")]),
               _vm._v(" "),
               _c("input", {
                 directives: [
@@ -19986,7 +20091,7 @@ var render = function() {
                 staticClass: "form-control",
                 attrs: {
                   type: "textfield",
-                  placeholder: "Masukan nama",
+                  placeholder: "Input your first name",
                   required: ""
                 },
                 domProps: { value: _vm.form.nama },
@@ -35126,6 +35231,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Create_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Create.vue */ "./resources/js/components/Create.vue");
 /* harmony import */ var _components_Read_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Read.vue */ "./resources/js/components/Read.vue");
 /* harmony import */ var _components_Update_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Update.vue */ "./resources/js/components/Update.vue");
+// require('./bootstrap');
+// window.Vue = require('vue');
+// import App from './App.vue';
+// import VueRouter from 'vue-router';
+// import VueAxios from 'vue-axios';
+// import axios from 'axios';
+// import {routes} from './routes';
+// Vue.use(VueRouter);
+// Vue.use(VueAxios, axios);
+// const router = new VueRouter({
+//     mode: 'history',
+//     routes: routes
+// });
+// const app = new Vue({
+//     el: '#app',
+//     router: router,
+//     render: h => h(App),
+// });
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js"); // import dependecies tambahan
@@ -35205,15 +35328,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=332fccf4& */ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js& */ "./resources/js/components/App.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["render"],
   _App_vue_vue_type_template_id_332fccf4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -35227,6 +35352,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/App.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/App.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/App.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

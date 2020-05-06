@@ -18,16 +18,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/bidangProfesi','BidangProfesiController@all');
+Route::get('/bidangProfesi/{id}','BidangProfesiController@show');
+Route::post('/bidangProfesi','BidangProfesiController@create');
+Route::put('/bidangProfesi/{id}','BidangProfesiController@update');
+Route::delete('/bidangProfesi/{id}','BidangProfesiController@delete');
 
-// Route::get('/bidang_profesi','BidangProfesiController@all');
-// Route::get('/bidang_profesi/{id}','BidangProfesiController@show');
-// Route::post('/bidang_profesi','BidangProfesiController@create');
-// Route::put('/bidang_profesi/{id}','BidangProfesiController@update');
-// Route::delete('/bidang_profesi/{id}','BidangProfesiController@delete');
+// Route::middleware('auth:api')->get('user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::get('/admin/bidangProfesi','BidangProfesiController@all');
-Route::get('/admin/bidangProfesi/{id}','BidangProfesiController@show');
-Route::post('/admin/bidangProfesi','BidangProfesiController@create');
-Route::put('/admin/bidangProfesi/{id}','BidangProfesiController@update');
-Route::delete('/admin/bidangProfesi/{id}','BidangProfesiController@delete');
-
+// Route::get('bidang_profesi', 'BidangProfesi@all');
+// Route::group(['prefix' => 'bidangprofesi'], function () {
+//     Route::post('add', 'BidangProfesi@add');
+//     Route::get('edit/{id}', 'BidangProfesi@edit');
+//     Route::post('update/{id}', 'BidangProfesi@update');
+//     Route::delete('delete/{id}', 'BidangProfesi@delete');
+// });

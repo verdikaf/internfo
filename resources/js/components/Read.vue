@@ -1,6 +1,7 @@
 <template>
   <div>
-   <div class="row">
+    <!-- disini saya menggunakan bootstrap untuk design tabel nya. secara default bootstrap sudah di include di file welcome.blade.php jadi saya tidak perlu lagi untuk import file nya -->
+    <div class="row">
       <div class="col-md-12">
         <br>
         <br>
@@ -9,6 +10,7 @@
             <h4>Persons</h4>
           </div>
           <div class="col-md-2">
+            <!-- push router ke form membuat data -->
             <router-link class="btn btn-primary w-100" to="/create">+ Tambah</router-link>
           </div>
         </div>
@@ -17,16 +19,16 @@
           <thead>
             <tr>
               <th scope="col">First</th>
-              <th scope="col">Last</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="bidang_profesi in bidang_profesis" :key="bidang_profesi.id">
-              <td style="width:40%">{{bidang_profesi.nama}}</td>
+            <!-- menampilkan data ke table -->
+            <tr v-for="bidangprofesi in bidang_profesi" :key="bidangprofesi.id">
+              <td style="width:40%">{{bidangprofesi.nama}}</td>
               <td style="width:20%">
-                <router-link class="btn btn-warning" :to="'/detail/'+bidang_profesi.id">Update</router-link>
-                <button class="btn btn-danger" v-on:click="deleteData(bidang_profesi.id)">Delete</button>
+                <router-link class="btn btn-warning" :to="'/detail/'+bidangprofesi.id">Update</router-link>
+                <button class="btn btn-danger" v-on:click="deleteData(bidangprofesi.id)">Delete</button>
               </td>
             </tr>
           </tbody>
@@ -36,11 +38,13 @@
   </div>
 </template>
 
+<!-- script js -->
 <script>
 export default {
   data() {
     return {
-      bidang_profesis: []
+      // variable array yang akan menampung hasil fetch dari api
+      bidang_profesi: []
     };
   },
   created() {
@@ -48,12 +52,15 @@ export default {
   },
   methods: {
     loadData() {
-      axios.get("http://localhost:8000/admin/api/bidangProfesi").then(response => {
-        this.bidang_profesis = response.data;
+      // fetch data dari api menggunakan axios
+      axios.get("http://localhost:8000/api/bidangprofesi").then(response => {
+        // mengirim data hasil fetch ke varibale array persons
+        this.bidangprofesi = response.data;
       });
     },
     deleteData(id) {
-      axios.delete("http://localhost:8000/admin/api/bidangProfesi/" + id).then(response => {
+      // delete data
+      axios.delete("http://localhost:8000/api/bidangprofesi/" + id).then(response => {
         this.loadData();
       });
     }

@@ -42,74 +42,51 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        @include('header_perusahaan')
-
+        @include('header_pemagang')
 
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         
-                    <p class="titles">UI/UX Designer</p>
+                        
+                        <div class="col-sm-6">
+                        <p class="titles">Internship</p>
+                        </div>
+                        
+
                         <div class="col-sm-12 ">
-
+                        
                             <div class="container_card">
-                                <div class="card4">
+                                <div class="card2">
                                     <div class="form">
-                                        <div class="row mb-4">
-                                            <div class="col-md-6">
-                                                <label class="title_intern">PT. OkeBos</label>
-                                                <p style="font-family: Quicksand; font-size: 20px; margin-top: -15px;">Jakarta, Indonesia</p>
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-25">
+                                                    <img src="{{url('assets/images/logo/Inferno_logo.png')}}" alt="Avatar" style="width:30%">
+                                                </div>
+                                                <div class="col-50">
+                                                    <label class="title_intern">UI/UX Designer</label>
+                                                    <h4 class="title_company">PT OKEBOS</h4>
+                                                </div>
+                                                <div class="col-25">
+                                                    <a href="/pemagang/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                </div>
                                             </div>
-                                            <div class="col-md-6 text-right">
-                                                <img src="{{url('/assets/images/logo/Inferno_logo.png')}}" width="100">
-                                            </div>
-                                        </div>
-
-                                        <hr style="border: 1px solid #ed145b;">
-
-                                        <div class="row mt-4">
-                                            <div class="col-md-6">
-                                                <label class="title_company">Job Description</label>
-                                                <table>
-                                                    <tr>
-                                                        <td>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                                                            lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                                                            lorem ipsum lorem ipsum</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label class="title_company">Requirements</label>
-                                                <table>
-                                                    <tr>
-                                                        <td>lorem ipsum</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>lorem ipsum</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                            <br>
-                                            
-                                        </div>
-                                        <div class="row">
-                                                <a href="{{url('/pemagang/internship-requirements')}}"><input type="submit" value="APPLY"></a>
-                                            </div>
+                                        </form>
                                     </div>
-                                    
                                 </div>
                             </div>
-                            
+         
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
-
         @include('footer_perusahaan')
+
 
         <script src="{{url('assets/js/vendor/jquery-1.11.2.min.js')}}"></script>
         <script src="{{url('assets/js/vendor/bootstrap.min.js')}}"></script>

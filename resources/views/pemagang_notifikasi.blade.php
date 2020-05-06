@@ -42,7 +42,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        @include('header_perusahaan')
+        @include('header_pemagang')
 
         <section id="home" class="home" >
             <div class="overlay">
@@ -70,7 +70,7 @@
 
                                                 </div>
                                                 <div class="col-25">
-                                                    <a href="/pemagang/detail-notification" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                    <a href="/pemagang/notification/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
                                             </div>
                                         </form>

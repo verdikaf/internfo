@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <div class="row">
@@ -9,11 +10,11 @@
         <!-- prevent form submit untuk reload halaman, kemudian memanggil function addData() -->
         <form @submit.prevent="addData()">
           <div class="form-group">
-            <label>Nama Bidang Profesi </label>
+            <label>First name</label>
             <input
               type="textfield"
               class="form-control"
-              placeholder="Masukan nama"
+              placeholder="Input your first name"
               v-model="form.nama"
               required
             >
@@ -38,7 +39,7 @@ export default {
     addData() {
       // post data ke api menggunakan axios
       axios
-        .post("http://localhost:8000/api/bidangProfesi", {
+        .post("http://localhost:8000/api/bidangprofesi", {
           nama: this.form.nama
         })
         .then(response => {

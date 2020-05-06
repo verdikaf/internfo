@@ -12,13 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/admin/{any}', function () {
-//     return view('welcome');
-// })->where('any','.*');
 
-Route::get('/', function () {
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/api/{any}', function () {
     return view('welcome');
-});
+})->where('any', '.*');
+
 
 // LOGIN
 Route::get('/login', 'LoginController@index');
@@ -45,29 +47,37 @@ Route::get('/perusahaan/lowongan/pendaftar', 'LowonganController@pendaftar');
 Route::get('/perusahaan/lowongan/pendaftar/detail', 'LowonganController@pendaftarDetail');
 Route::get('/perusahaan/lowongan/pendaftar/lolos', 'LowonganController@pendaftarLolos');
 
-
-
-
-// // CRUD PERUSAHAAN 
-// Route::get('/admin/perusahaan', 'PerusahaanController@index');
-// Route::get('/admin/perusahaan/add', 'PerusahaanController@add');
-// Route::get('/admin/perusahaan/add/proses', 'PerusahaanController@addProses');
-// Route::get('/admin/perusahaan/edit/{id}', 'PerusahaanController@edit');
-// Route::get('/admin/perusahaan/edit/proses', 'PerusahaanController@editProses');
+// PEMANGANG
+Route::get('/pemagang/lowongan', 'LowonganController@index');
+Route::get('/perusahaan/lowongan/add', 'LowonganController@add');
+Route::get('/perusahaan/lowongan/add/proses', 'LowonganController@addProses');
+Route::get('/perusahaan/lowongan/detail/{id}', 'LowonganController@detail');
+Route::get('/perusahaan/lowongan/pendaftar', 'LowonganController@pendaftar');
+Route::get('/perusahaan/lowongan/pendaftar/detail', 'LowonganController@pendaftarDetail');
+Route::get('/perusahaan/lowongan/pendaftar/lolos', 'LowonganController@pendaftarLolos');
 
 // PEMAGANG
-Route::get('/pemagang/internship-list', function () {
+Route::get('/pemagang/index', 'PemagangController@index');
+Route::get('/pemagang/detail', 'PemagangController@detail');
+Route::get('/pemagang/requirements', 'PemagangController@requirements');
+Route::get('/pemagang/notification', 'PemagangController@notification');
+Route::get('/pemagang/notification/detail', 'PemagangController@notificationDetail');
+
+
+
+// PEMAGANG
+Route::get('/pemagang/internship/index', function () {
     return view('pemagang_internship_list');
 });
-Route::get('/pemagang/internship-detail', function () {
+Route::get('/pemagang/internship/detail', function () {
     return view('pemagang_internship_detail');
 });
-Route::get('/pemagang/internship-requirements', function () {
+Route::get('/pemagang/internship/requirements', function () {
     return view('pemagang_internship_requirements');
 });
-Route::get('/pemagang/internship-notification', function () {
+Route::get('/pemagang/internship/notification', function () {
     return view('pemagang_internship_notifikasi');
 });
-Route::get('/pemagang/detail-notification', function () {
+Route::get('/pemagang/internfship/notification/detail', function () {
     return view('pemagang_internship_detailnotif');
 });
