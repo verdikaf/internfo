@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
-    
+    <style>
+    </style>
     <link rel="stylesheet" href="{{url('/assets/library/bootstrap/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{url('/assets/library/fontawesome/css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{url('/assets/library/extras/login.css')}}">
@@ -25,23 +26,19 @@
             </div>
       </div>
       <div class="main">
-         <div class="card">
-            <div class="form-group2">
-            <label class="radio_title2">Buat Akun untuk :</label>
+            <div class="login-main-form3">
+               <center><h1>Register</h1></center>
                <div> 
                   <input type="radio"  value="0" v-model="type">
                   <label for="option" class="radio_title">Pelamar</label>
-               </div>
-               <div>
+                  &nbsp; &nbsp; &nbsp;
                   <input type="radio"  value="1" v-model="type" >
                   <label for="option" class="radio_title">Perusahaan</label>
                </div>
             </div>
-         </div>
       </div>
       <div class="main" v-if="type == 0">
          <div class="login-main-form2">
-            <center><h1>Register Pelamar.</h1></center>
             <form action="{{url('/signup/pelamar/action')}}" method="POST" enctype="multipart/form-data">
                <input type="hidden" name="_token" value="{{csrf_token()}}">
                <div class="form-group">
@@ -92,7 +89,6 @@
       <!-- SIGNUP PEMAGANG -->
       <div class="main" v-if="type == 1">
          <div class="login-main-form2">
-            <center><h1>Register Perusahaan.</h1></center>
             <form action="{{url('/signup/perusahaan/action')}}" method="POST" enctype="multipart/form-data">
                <input type="hidden" name="_token" value="{{csrf_token()}}">
                <div class="form-group">

@@ -55,13 +55,14 @@
                             <div class="container_card">
                                 <div class="card">
                                     <div class="form">
-                                        <form action="#">
+                                        <form action="/perusahaan/lowongan/add/proses" method="post" enctype="multipart/form-data">
+                                        {{ csrf_field() }}
                                             <div class="row">
                                                 <div class="col-25">
                                                     <label>Nama Pekerjaan</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="job_title" name="job_title" placeholder="ex. UI/UX Designer" >
+                                                    <input type="text" id="job_title" name="job_title" placeholder="ex. UI/UX Designer" required>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -69,7 +70,8 @@
                                                     <label>Deskripsi</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="deskripsi" name="deskripsi" placeholder="Tulis Deskripsi...">
+                                                    <textarea name="deskripsi" id="deskripsi" cols="30" rows="5" placeholder="Tulis Deskripsi..." required></textarea>
+                                                    <!-- <input type="text" id="deskripsi" name="deskripsi" placeholder="Tulis Deskripsi..."> -->
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -77,7 +79,7 @@
                                                     <label>Lokasi</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="text" id="lokasi" name="lokasi" placeholder="Lokasi Kerja...">
+                                                    <input type="text" id="lokasi" name="lokasi" placeholder="Lokasi Kerja..." required>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -86,11 +88,10 @@
                                                 </div>
                                                 <div class="col-75 ">
                                                     <div class="select">
-                                                        <select id="bidang_profesi" name="bidang_profesi">
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
-                                                            <option value="#">--Pilih--</option>
+                                                        <select id="bidang_profesi" name="bidang_profesi_id" required>
+                                                            @foreach($bid_profesi as $b)
+                                                            <option value="{{$b->id}}">{{$b->nama}}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>

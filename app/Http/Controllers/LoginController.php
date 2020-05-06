@@ -19,17 +19,17 @@ class LoginController extends Controller
             echo $request->input('password');
 
             if ($request->input('hak_akses') == 1) {
-                $result = DB::selectOne("SELECT id, nama, email FROM pelamar WHERE email=? AND password=?", [
+                $result = DB::selectOne("SELECT id, nama, email, foto FROM pelamar WHERE email=? AND password=?", [
                     $request->input('email'),
                     $request->input('password')
                 ]);
             } elseif ($request->input('hak_akses') == 2) {
-                $result = DB::selectOne("SELECT id, nama, email FROM perusahaan WHERE email=? AND password=?", [
+                $result = DB::selectOne("SELECT id, nama, email, foto FROM perusahaan WHERE email=? AND password=?", [
                     $request->input('email'),
                     $request->input('password')
                 ]);
             } elseif ($request->input('hak_akses') == 3) {
-                $result = DB::selectOne("SELECT id, nama, email FROM admin WHERE email=? AND password=?", [
+                $result = DB::selectOne("SELECT id, nama, email, foto FROM admin WHERE email=? AND password=?", [
                     $request->input('email'),
                     $request->input('password')
                 ]);
@@ -44,6 +44,7 @@ class LoginController extends Controller
                 $request->session()->put('s_id', $result->id);
                 $request->session()->put('s_nama', $result->nama);
                 $request->session()->put('s_email', $result->email);
+                $request->session()->put('s_foto', $result->foto);
 
                 echo $request->session()->put('s_id', $result->id);
 

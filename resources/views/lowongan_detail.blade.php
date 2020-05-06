@@ -65,7 +65,7 @@
                                                 <p style="font-family: Quicksand; font-size: 20px; margin-top: -15px;">{{$k->lokasi}}</p>
                                             </div>
                                             <div class="col-md-6 text-right">
-                                                <img src="{{url('/assets/images/logo/Inferno_logo.png')}}" width="100">
+                                                <img src="/{{$k->foto}}" width="100">
                                             </div>
                                         </div>
 
@@ -84,7 +84,7 @@
                                                 <label class="title_company">Jurusan</label>
                                                 <table>
                                                     <tr>
-                                                        <td>Sistem Informasi</td>
+                                                        <td>{{$k->bid_profesi}}</td>
                                                     </tr>
                                                 </table>
                                             </div>
