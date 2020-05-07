@@ -47,37 +47,11 @@ Route::get('/perusahaan/lowongan/pendaftar', 'LowonganController@pendaftar');
 Route::get('/perusahaan/lowongan/pendaftar/detail', 'LowonganController@pendaftarDetail');
 Route::get('/perusahaan/lowongan/pendaftar/lolos', 'LowonganController@pendaftarLolos');
 
-// PEMANGANG
-Route::get('/pemagang/lowongan', 'LowonganController@index');
-Route::get('/perusahaan/lowongan/add', 'LowonganController@add');
-Route::get('/perusahaan/lowongan/add/proses', 'LowonganController@addProses');
-Route::get('/perusahaan/lowongan/detail/{id}', 'LowonganController@detail');
-Route::get('/perusahaan/lowongan/pendaftar', 'LowonganController@pendaftar');
-Route::get('/perusahaan/lowongan/pendaftar/detail', 'LowonganController@pendaftarDetail');
-Route::get('/perusahaan/lowongan/pendaftar/lolos', 'LowonganController@pendaftarLolos');
-
 // PEMAGANG
-Route::get('/pemagang/index', 'PemagangController@index');
-Route::get('/pemagang/detail', 'PemagangController@detail');
-Route::get('/pemagang/requirements', 'PemagangController@requirements');
+Route::get('/pemagang', 'PemagangController@index');
+Route::get('/pemagang/detail/{id}', 'PemagangController@detail');
+Route::post('/pemagang/apply/action', 'PemagangController@applyAdd');
+Route::get('/pemagang/requirements/{id}', 'PemagangController@requirements');
+Route::post('/pemagang/requirements/action', 'PemagangController@requirementsAdd');
 Route::get('/pemagang/notification', 'PemagangController@notification');
 Route::get('/pemagang/notification/detail', 'PemagangController@notificationDetail');
-
-
-
-// PEMAGANG
-Route::get('/pemagang/internship/index', function () {
-    return view('pemagang_internship_list');
-});
-Route::get('/pemagang/internship/detail', function () {
-    return view('pemagang_internship_detail');
-});
-Route::get('/pemagang/internship/requirements', function () {
-    return view('pemagang_internship_requirements');
-});
-Route::get('/pemagang/internship/notification', function () {
-    return view('pemagang_internship_notifikasi');
-});
-Route::get('/pemagang/internfship/notification/detail', function () {
-    return view('pemagang_internship_detailnotif');
-});

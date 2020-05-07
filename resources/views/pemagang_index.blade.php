@@ -56,29 +56,28 @@
                         
 
                         <div class="col-sm-12 ">
-                        
+                        @foreach($lowongan as $l)
                             <div class="container_card">
                                 <div class="card2">
                                     <div class="form">
                                         <form>
                                             <div class="row">
                                                 <div class="col-25">
-                                                    <img src="{{url('assets/images/logo/Inferno_logo.png')}}" alt="Avatar" style="width:30%">
+                                                    <img src="/{{$l->foto}}" alt="Avatar" style="width:30%">
                                                 </div>
                                                 <div class="col-50">
-                                                    <label class="title_intern">UI/UX Designer</label>
-                                                    <h4 class="title_company">PT OKEBOS</h4>
+                                                    <label class="title_intern">{{$l->job_title}}</label>
+                                                    <h4 class="title_company">{{$l->nama_perusahaan}}</h4>
                                                 </div>
                                                 <div class="col-25">
-                                                    <a href="/pemagang/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                    <a href="/pemagang/detail/{{$l->id}}" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-         
-
+                        @endforeach
                         </div>
                     </div>
                 </div>

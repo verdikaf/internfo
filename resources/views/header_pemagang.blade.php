@@ -52,9 +52,9 @@
                                         <ul class="nav navbar-nav navbar-right">
                                             <li><a href="/pemagang/index">Job</a></li>
                                             <li><a href="/pemagang/notification">Notification</a></li>
-                                            <li><a href="/dashboard/pemagang">UserName</a></li>
+                                            <li><a href="/dashboard/pemagang">{{$session['nama']}}</a></li>
                                             <li class="profile"></li>
-                                            <a href="/dashboard/pemagang"><img src="{{url('assets/images/logo/user.png')}}" alt="" style="width:50px; padding-top: 8px; "></a>  
+                                            <a href="/dashboard/pemagang"><img src="/{{$session['foto']}}" alt="" style="width:50px; padding-top: 8px; "></a>  
                                         </ul>  
                                         
                                     </div>

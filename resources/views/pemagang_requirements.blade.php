@@ -55,9 +55,19 @@
 
                             <div class="container_card">
                                 <div class="card6">
+                                
                                     <div class="form">
-                                        
-                                        <div class="row">
+                                        <form action="{{url('/pemagang/requirements/action')}}" method="POST" enctype="multipart/form-data">
+                                        {{ csrf_field() }}
+                                        @foreach($lowongan as $l)
+                                        <input type="hidden" name="id_lowongan" value="{{$l->id}}">
+                                        <input type="hidden" name="perusahaan" value="{{$l->nama_perusahaan}}">
+                                        @endforeach
+                                        @foreach($data_apply as $d)
+                                        <input type="hidden" name="id_data_apply" value="{{$d->id}}">
+                                        @endforeach
+                                        <input type="hidden" name="pelamar" value="{{$session['nama']}}">
+                                            <div class="row">
                                                 <div class="col-25">
                                                     <label class="label-pemagang">Berkas</label>
                                                 </div>
@@ -65,22 +75,22 @@
                                                     <input type="file" id="berkas" name="berkas"><br>
                                                     <p class="keterangan">*Masukan Berkas CV & KHS dalam satu file.</p>
                                                 </div>
-                                        </div>
-                                        <div class="row">
+                                            </div>
+                                            <div class="row">
                                                 <div class="col-25">
                                                     <label class="label-pemagang">Portofolio</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <input type="file" id="berkas" name="berkas"><br>
+                                                    <input type="file" id="berkas" name="portofolio"><br>
                                                     <p class="keterangan">*Masukan Portofolio dalam satu file.</p>
                                                 </div>
-                                        </div>
+                                            </div>
 
-                                        <div class="row">
-                                                <a href="{{url('/pemagang/internship-requirements')}}"><input type="submit" value="SEND"></a>
-                                        </div>
+                                            <div class="row">
+                                                <input type="submit" value="SEND">
+                                            </div>
+                                        </form>
                                     </div>
-                                    
                                 </div>
                             </div>
                             
