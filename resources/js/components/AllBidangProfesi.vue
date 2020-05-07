@@ -1,22 +1,29 @@
 <template>
-    <div>
-        <h3 class="text-center">All Books</h3><br/>
-
+    <div class="adminpage">
+        <center>
+        <h1 class="text-center" style="color:white">Bidang Profesi</h1>
+        <br/>
+        <router-link to="/add" class="btn btn-logout2 text-center" style="text-decoration:none" >Tambah</router-link>
+        </center>
+        <br>
+        <br>
         <table class="table table-bordered">
             <thead>
-            <tr>
+            <tr class="table-head">
+                <th>ID</th>
                 <th>Name</th>
-                <th>Actions</th>
+                <th class="col-15">Actions</th>
             </tr>
             </thead>
-            <tbody>
-            <tr v-for="bidangprofesi in bidang_profesi" :key="bidangprofesi.id">
-                <td>{{ bidangprofesi.nama }}</td>
+            <tbody class="table-body">
+            <tr v-for="book in bidang_profesi" :key="book.id">
+                <td>{{ book.id }}</td>
+                <td>{{ book.nama }}</td>
                 <td>
                     <div class="btn-group" role="group">
-                        <router-link :to="{name: 'edit', params: { id: bidangprofesi.id }}" class="btn btn-primary">Edit
+                        <router-link :to="{name: 'edit', params: { id: book.id }}" class="btn btn-primary">Edit
                         </router-link>
-                        <button class="btn btn-danger" @click="deleteBidangprofesi(bidangprofesi.id)">Delete</button>
+                        <button class="btn btn-info" @click="deleteBook(book.id)">Delete</button>
                     </div>
                 </td>
             </tr>
@@ -34,15 +41,15 @@
         },
         created() {
             this.axios
-                .get('http://localhost:8000/api/bidang_profesi')
+                .get('http://localhost:8000/api/bidangProfesi')
                 .then(response => {
                     this.bidang_profesi = response.data;
                 });
         },
         methods: {
-            deleteBidangprofesi(id) {
+            deleteBook(id) {
                 this.axios
-                    .delete(`http://localhost:8000/api/bidangprofesi/delete/${id}`)
+                    .delete(`http://localhost:8000/api/bidangProfesi/delete/${id}`)
                     .then(response => {
                         let i = this.bidang_profesi.map(item => item.id).indexOf(id); // find index of your object
                         this.bidang_profesi.splice(i, 1)

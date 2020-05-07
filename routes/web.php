@@ -17,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/api/{any}', function () {
-    return view('welcome');
-})->where('any', '.*');
 
 
 // LOGIN
@@ -36,7 +33,9 @@ Route::get('/sign-out', 'DashboardController@signOut');
 // DASHBOARD
 Route::get('/dashboard/perusahaan', 'DashboardController@perusahaan');
 Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
-Route::get('/dashboard/admin', 'DashboardController@admin');
+Route::get('/dashboard/admin/{any}', function () {
+    return view('admin');
+})->where('any','.*');
 
 // CRUD LOWONGAN -- PERUSAHAAN
 Route::get('/perusahaan/lowongan', 'LowonganController@index');
