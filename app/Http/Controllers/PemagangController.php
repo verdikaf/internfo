@@ -27,5 +27,8 @@ class PemagangController extends Controller
     public function notificationDetail(){
         return view('pemagang_notifikasi_detail');
     }
+    public function notificationRejectDetail(){
+        return view('pemagang_notifikasi_detail_tolak');
+    }
     
 }

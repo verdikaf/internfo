@@ -61,6 +61,7 @@ Route::get('/pemagang/detail', 'PemagangController@detail');
 Route::get('/pemagang/requirements', 'PemagangController@requirements');
 Route::get('/pemagang/notification', 'PemagangController@notification');
 Route::get('/pemagang/notification/detail', 'PemagangController@notificationDetail');
+Route::get('/pemagang/notification/detail-tolak', 'PemagangController@notificationRejectDetail');
 
 
 

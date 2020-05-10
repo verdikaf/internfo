@@ -1,6 +1,6 @@
 <template>
     <div class="adminpage">
-        <h3 class="text-center">Tambah Data Bidang Profesi</h3>
+        <h3 class="text-center" style="color:white">Tambah Data Bidang Profesi</h3>
         <div class="row">
             <!-- <div class="col-md-12">
                 <form @submit.prevent="addBidangprofesi">

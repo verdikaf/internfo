@@ -7,7 +7,7 @@
         </center>
         <br>
         <br>
-        <table class="table table-bordered">
+        <table class="table table-bordered" style="border-radius: 1em;">
             <thead>
             <tr class="table-head">
                 <th>ID</th>

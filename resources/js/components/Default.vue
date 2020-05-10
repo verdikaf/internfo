@@ -1,8 +1,9 @@
 <template>
-    <div class="adminpage" >
+    <div class="adminpage" id="mainadmin">
         <center>
+            <img :src="internfo" style="width:100%;" alt="">
         <p class="headtitle">Internfo</p>
-        <br/>
+        <br><br><br><br>
         <p  class="headsubtitle">Welcome to Admin Page</p>
         <router-link to="/bidangprofesi" class="btn btn-dashboard text-center" style="text-decoration:none" >Bidang Profesi</router-link> 
         <router-link to="/pelamar" class="btn btn-dashboard text-center" style="text-decoration:none" >Pelamar</router-link> 
@@ -14,9 +15,20 @@
 </template>
 
 <script>
+    export default { 
+        name: 'mainadmin',
+        components:{
+            internfo: '/assets/images/logo/Inferno_type_whi.png'
+        }
+        }
+</script>
+
+<script>
     export default {
+       
         data() {
             return {
+                //internfo: 'assets/images/logo/Inferno_type_whi.png',
                 bidang_profesi: []
             }
         },
