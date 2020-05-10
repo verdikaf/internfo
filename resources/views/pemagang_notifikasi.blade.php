@@ -56,28 +56,36 @@
                         
 
                         <div class="col-sm-12 ">
-                        
+                        @foreach($data_apply as $d)
                             <div class="container_card">
                                 <div class="card2">
                                     <div class="form">
                                         <form>
                                             <div class="row">
-                                                <div class="col-25">
+                                                <!-- <div class="col-25">
                                                     <img src="{{url('assets/images/logo/notification.png')}}" alt="Avatar" style="width:30%">
+                                                </div> -->
+                                                <div class="col-50">
+                                                    <label class="title_detail2">{{$d->tanggal}}</label>
                                                 </div>
                                                 <div class="col-50">
-                                                    <label class="title_detail2">PT Kluyar Kluyur</label>
-
+                                                    <label class="title_detail2">{{$d->perusahaan}}</label>
                                                 </div>
-                                                <div class="col-25">
+                                                <div class="col-50">
+                                                    <label class="title_detail2">{{$d->job}}</label>
+                                                </div>
+                                                <div class="col-50">
+                                                    <label class="title_detail2">{{$d->status}}</label>
+                                                </div>
+                                                <!-- <div class="col-25">
                                                     <a href="/pemagang/notification/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-         
+                        @endforeach
 
                         </div>
                     </div>

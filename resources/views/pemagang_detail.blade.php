@@ -44,58 +44,62 @@
 
         @include('header_pemagang')
 
-
+        @foreach($lowongan as $l)
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         
-                    <p class="titles">UI/UX Designer</p>
+                    <p class="titles">{{$l->job_title}}</p>
                         <div class="col-sm-12 ">
 
                             <div class="container_card">
                                 <div class="card4">
                                     <div class="form">
-                                        <div class="row mb-4">
-                                            <div class="col-md-6">
-                                                <label class="title_intern">PT. OkeBos</label>
-                                                <p style="font-family: Quicksand; font-size: 20px; margin-top: -15px;">Jakarta, Indonesia</p>
+                                        <form action="{{url('/pemagang/apply/action')}}" method="POST" enctype="multipart/form-data">
+                                        {{ csrf_field() }}
+                                            <input type="hidden" name="id_lowongan" value="{{$l->id}}">
+                                            <input type="hidden" name="perusahaan" value="{{$l->nama_perusahaan}}">
+                                            <input type="hidden" name="pelamar" value="{{$session['nama']}}">
+                                            <div class="row mb-4">
+                                                <div class="col-md-6">
+                                                    <label class="title_intern">{{$l->nama_perusahaan}}</label>
+                                                    <p style="font-family: Quicksand; font-size: 20px; margin-top: -15px;">{{$l->lokasi}}</p>
+                                                </div>
+                                                <div class="col-md-6 text-right">
+                                                    <img src="/{{$l->foto}}" width="100">
+                                                </div>
                                             </div>
-                                            <div class="col-md-6 text-right">
-                                                <img src="{{url('/assets/images/logo/Inferno_logo.png')}}" width="100">
-                                            </div>
-                                        </div>
 
-                                        <hr style="border: 1px solid #ed145b;">
+                                            <hr style="border: 1px solid #ed145b;">
 
-                                        <div class="row mt-4">
-                                            <div class="col-md-6">
-                                                <label class="title_company">Job Description</label>
-                                                <table>
-                                                    <tr>
-                                                        <td>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                                                            lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                                                            lorem ipsum lorem ipsum</td>
-                                                    </tr>
-                                                </table>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <label class="title_company">Job Description</label>
+                                                    <table>
+                                                        <tr>
+                                                            <td>{{$l->deskripsi}}</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="title_company">Requirements</label>
+                                                    <table>
+                                                        <tr>
+                                                            <td>Berkas CV & KHS</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Portofolio</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <br>
+                                                
                                             </div>
-                                            <div class="col-md-6">
-                                                <label class="title_company">Requirements</label>
-                                                <table>
-                                                    <tr>
-                                                        <td>Berkas CV & KHS</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Portofolio</td>
-                                                    </tr>
-                                                </table>
+                                            <div class="row">
+                                                <input type="submit" value="APPLY">
                                             </div>
-                                            <br>
-                                            
-                                        </div>
-                                        <div class="row">
-                                                <a href="{{url('/pemagang/requirements')}}"><input type="submit" value="APPLY"></a>
-                                            </div>
+                                        </form>
                                     </div>
                                     
                                 </div>
@@ -106,7 +110,7 @@
                 </div>
             </div>
         </section>
-
+        @endforeach
 
 
         @include('footer_perusahaan')
