@@ -57,7 +57,7 @@
                                 <div class="card4">
                                     <div class="form">
                                         <div class="row mb-4">
-                                            <center><label class="title_intern">Pengumuman Tahap Administrasi</label></center>
+                                            <center><label class="title_intern">Anda Telah Terdaftar</label></center>
                                         </div>
 
                                         <hr style="border: 1px solid #ed145b;">
@@ -65,21 +65,17 @@
                                         <div class="row mt-4">
                                             <div class="col-md-10">
                                             <p style="font-family: Quicksand; font-size: 20px;">Kepada Yth.</p>
-                                                <label class="title_company">Esmeralda Wahyuni</label><br><br><br>
+                                                <label class="title_company">{{$session['nama']}}</label><br><br><br>
                                                 <table>
                                                     <tr>
-                                                    <td style="font-size: 20px;">Selamat atas lolosnya tahap administrasi. 
-                                                        Berikut kami cantumkan link tes teknis agar saudara kerjakan semaksimal mungkin</td>
+                                                    <td style="font-size: 20px;">Terima kasih telah mendaftar di perusahaan kami.
+                                                    Silakan tunggu informasi selanjutnya terkait hasil seleksi administrasi pada halaman notifikasi berikut.</td>
                                                     </tr>
                                                 </table>
                                             </div>
                                             <br>
                                             
-                                        </div><br><br>
-                                        <div class="row">
-                                                <center><a href="">http://bit.ly/tesTeknis2020Internship</a></center>
-                                              
-                                            </div>
+                                        </div>
                                     </div>
                                     
                                 </div>

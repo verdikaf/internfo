@@ -77,9 +77,9 @@
                                                 <div class="col-50">
                                                     <label class="title_detail2">{{$d->status}}</label>
                                                 </div>
-                                                <!-- <div class="col-25">
-                                                    <a href="/pemagang/notification/detail" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
-                                                </div> -->
+                                                <div class="col-25">
+                                                <a href="/pemagang/notification/detail/{{$d->lowongan_id}}/{{$d->status}}" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>

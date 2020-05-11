@@ -64,7 +64,11 @@ class LowonganController extends Controller
         return view('lowongan_detail', $data);
     }
     
-    public function pendaftar(Request $request){
+    public function pendaftar(Request $request, $id){
+        $data['data_apply'] = DB::table('data_apply')
+                            ->join('pelamar', 'data_apply.pelamar_id', '=', 'pelamar.id')
+                            ->select(DB::raw('data_apply.*, pelamar.foto as foto'))
+                            ->where('data_apply.lowongan_id',$id)->get();
         $data['session']  = array(
             'id'       => $request->session()->get('s_id'),
             'nama'     => $request->session()->get('s_nama'),
@@ -73,7 +77,26 @@ class LowonganController extends Controller
         );
         return view('lowongan_pendaftar', $data);
     }
-    public function pendaftarDetail(Request $request){
+    public function pendaftarDetail(Request $request, $id){
+        $data['data_apply'] = DB::table('data_apply')
+                            ->join('pelamar', 'data_apply.pelamar_id', '=', 'pelamar.id')
+                            ->select(DB::raw('data_apply.*, pelamar.tempat_lahir as tmp,
+                            pelamar.tgl_lahir as tgl, pelamar.alamat as alamat, pelamar.telp as telp'))
+                            ->where('data_apply.id',$id)->get();
+        $data['berkas'] = DB::table('upload_berkas')
+                            ->select(DB::raw('*'))
+                            ->where([
+                                'data_apply_id' => $id,
+                                'nama' => 'resume'
+                                ])
+                            ->get();
+        $data['porto'] = DB::table('upload_berkas')
+                            ->select(DB::raw('*'))
+                            ->where([
+                                'data_apply_id' => $id,
+                                'nama' => 'portofolio'
+                                ])
+                            ->get();
         $data['session']  = array(
             'id'       => $request->session()->get('s_id'),
             'nama'     => $request->session()->get('s_nama'),
@@ -82,8 +105,35 @@ class LowonganController extends Controller
         );
         return view('lowongan_data_apply', $data);
     }
-    public function pendaftarLolos(){
-        return view('lowongan_pendaftar_lolos');
+
+    public function pendaftarLolos(Request $request, $id, $lowongan){
+        $data['session']  = array(
+            'id'       => $request->session()->get('s_id'),
+            'nama'     => $request->session()->get('s_nama'),
+            'email'   => $request->session()->get('s_email'),
+            'foto'   => $request->session()->get('s_foto')
+        );
+        $data['data_apply'] = DB::table('data_apply')
+                            ->join('pelamar', 'data_apply.pelamar_id', '=', 'pelamar.id')
+                            ->select(DB::raw('data_apply.*, pelamar.foto as foto'))
+                            ->where('data_apply.lowongan_id',$lowongan)->get();
+        DB::update("UPDATE data_apply SET status='terima' WHERE id=?", [$id]);
+        return view('lowongan_pendaftar', $data);
+    }
+
+    public function pendaftarTolak(Request $request, $id, $lowongan){
+        $data['session']  = array(
+            'id'       => $request->session()->get('s_id'),
+            'nama'     => $request->session()->get('s_nama'),
+            'email'   => $request->session()->get('s_email'),
+            'foto'   => $request->session()->get('s_foto')
+        );
+        $data['data_apply'] = DB::table('data_apply')
+                            ->join('pelamar', 'data_apply.pelamar_id', '=', 'pelamar.id')
+                            ->select(DB::raw('data_apply.*, pelamar.foto as foto'))
+                            ->where('data_apply.lowongan_id',$lowongan)->get();
+        DB::update("UPDATE data_apply SET status='tolak' WHERE id=?", [$id]);
+        return view('lowongan_pendaftar', $data);
     }
     
 }

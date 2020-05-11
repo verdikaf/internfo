@@ -45,7 +45,7 @@
             <center>
                     <img src="{{url('/assets/images/logo/Inferno_type_whi.png')}}" alt="" class="title"><br><br>
                     <p class="subtitle">Mari Ciptakan lapangan Pekerjaan dengan bantuan Internfo</p>
-                    <a href="/signup" type="button" class="btn btn-black">Lihat</a>
+                    <a href="/pemagang" type="button" class="btn btn-black">Lihat</a>
             </center>
         </div>
       </div>

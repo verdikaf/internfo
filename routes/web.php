@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // LOGIN
-Route::get('/login', 'LoginController@index');
+Route::get('/', 'LoginController@index');
 Route::post('/login/action', 'LoginController@loginAction');
 
 // SIGNUP
@@ -42,9 +42,10 @@ Route::get('/perusahaan/lowongan', 'LowonganController@index');
 Route::get('/perusahaan/lowongan/add', 'LowonganController@add');
 Route::post('/perusahaan/lowongan/add/proses', 'LowonganController@addProses');
 Route::get('/perusahaan/lowongan/detail/{id}', 'LowonganController@detail');
-Route::get('/perusahaan/lowongan/pendaftar', 'LowonganController@pendaftar');
-Route::get('/perusahaan/lowongan/pendaftar/detail', 'LowonganController@pendaftarDetail');
-Route::get('/perusahaan/lowongan/pendaftar/lolos', 'LowonganController@pendaftarLolos');
+Route::get('/perusahaan/lowongan/pendaftar/{id}', 'LowonganController@pendaftar');
+Route::get('/perusahaan/lowongan/pendaftar/detail/{id}', 'LowonganController@pendaftarDetail');
+Route::get('/perusahaan/lowongan/pendaftar/lolos/{id}/{lowongan}', 'LowonganController@pendaftarLolos');
+Route::get('/perusahaan/lowongan/pendaftar/tolak/{id}/{lowongan}', 'LowonganController@pendaftarTolak');
 
 // PEMAGANG
 Route::get('/pemagang', 'PemagangController@index');
@@ -53,24 +54,5 @@ Route::post('/pemagang/apply/action', 'PemagangController@applyAdd');
 Route::get('/pemagang/requirements/{id}', 'PemagangController@requirements');
 Route::post('/pemagang/requirements/action', 'PemagangController@requirementsAdd');
 Route::get('/pemagang/notification', 'PemagangController@notification');
-Route::get('/pemagang/notification/detail', 'PemagangController@notificationDetail');
-Route::get('/pemagang/notification/detail-tolak', 'PemagangController@notificationRejectDetail');
+Route::get('/pemagang/notification/detail/{id}/{status}', 'PemagangController@notificationDetail');
 
-
-
-// PEMAGANG
-// Route::get('/pemagang/internship/index', function () {
-//     return view('pemagang_internship_list');
-// });
-// Route::get('/pemagang/internship/detail', function () {
-//     return view('pemagang_internship_detail');
-// });
-// Route::get('/pemagang/internship/requirements', function () {
-//     return view('pemagang_internship_requirements');
-// });
-// Route::get('/pemagang/internship/notification', function () {
-//     return view('pemagang_internship_notifikasi');
-// });
-// Route::get('/pemagang/internfship/notification/detail', function () {
-//     return view('pemagang_internship_detailnotif');
-// });

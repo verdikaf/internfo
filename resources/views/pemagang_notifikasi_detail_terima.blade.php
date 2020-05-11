@@ -42,40 +42,51 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        @include('header_perusahaan')
+        @include('header_pemagang')
+
 
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         
-                        
-                        <div class="col-sm-6">
-                        <p class="titles">Lowongan</p>
-                        </div>
-                        @foreach ($data_apply as $d)
+                    <p class="titles">Notification</p>
                         <div class="col-sm-12 ">
+
                             <div class="container_card">
-                                <div class="card3">
-                                    <div class="form2">
-                                        <form action="/action_page.php">
-                                            <div class="row">
-                                                <div class="col-15">
-                                                    <img src="/{{$d->foto}}" alt="" class="profile">
-                                                </div>
-                                                <div class="col-60">
-                                                    <label class="title_detail2">{{$d->pelamar}}</label>
-                                                </div>
-                                                <div class="col-25">
-                                                <a href="/perusahaan/lowongan/pendaftar/detail/{{$d->id}}" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
-                                                </div>
+                                <div class="card4">
+                                    <div class="form">
+                                        <div class="row mb-4">
+                                            <center><label class="title_intern">Pengumuman Tahap Administrasi</label></center>
+                                        </div>
+
+                                        <hr style="border: 1px solid #ed145b;">
+
+                                        <div class="row mt-4">
+                                            <div class="col-md-10">
+                                            <p style="font-family: Quicksand; font-size: 20px;">Kepada Yth.</p>
+                                                <label class="title_company">{{$session['nama']}}</label><br><br><br>
+                                                <table>
+                                                    <tr>
+                                                    <td style="font-size: 20px;">Selamat anda telah <b style="color: green">LOLOS</b> tahap administrasi. 
+                                                        Berikut kami cantumkan link tes teknis agar saudara kerjakan semaksimal mungkin</td>
+                                                    </tr>
+                                                </table>
                                             </div>
-                                        </form>
+                                            <br>
+                                            
+                                        </div><br><br>
+                                        <div class="row">
+                                            @foreach($apply as $d)
+                                                <center><a href="{{$d->link_lolos}}" target='blank'>LINK LOLOS</a></center>
+                                            @endforeach
+                                        </div>
                                     </div>
+                                    
                                 </div>
                             </div>
+                            
                         </div>
-                        @endforeach
                     </div>
                 </div>
             </div>

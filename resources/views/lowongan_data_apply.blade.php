@@ -43,14 +43,14 @@
         <![endif]-->
 
         @include('header_perusahaan')
-
+        @foreach ($data_apply as $d)
 
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         
-                    <p class="titles">Jake Peralta</p>
+                    <p class="titles">{{$d->pelamar}}</p>
                         <div class="col-sm-12 ">
 
                             <div class="container_card">
@@ -62,7 +62,7 @@
                                                     <label>Nama</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <label class="label2">Jake Peralta</label>
+                                                    <label class="label2">{{$d->pelamar}}</label>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -70,7 +70,7 @@
                                                     <label>TTL</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <label class="label2">Malang, 25 Januari 1999</label>
+                                                    <label class="label2">{{$d->tmp}}, {{$d->tgl}}</label>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -78,7 +78,7 @@
                                                     <label>Alamat</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <label class="label2">Jl.Mayjen Pandjaitan, Klojen, Malang</label>
+                                                    <label class="label2">{{$d->alamat}}</label>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -86,15 +86,17 @@
                                                     <label>No Telp</label>
                                                 </div>
                                                 <div class="col-75">
-                                                    <label class="label2">0812546981</label>
+                                                    <label class="label2">{{$d->telp}}</label>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
                                                     <label>Berkas</label>
                                                 </div>
-                                                <div class="col-25">            
-                                                    <a href="#" type="button" class="btn-white2 btn-sm">Lihat</a>
+                                                <div class="col-25">
+                                                    @foreach ($berkas as $b)
+                                                    <a href="{{$b->file_berkas}}" type="button" class="btn-white2 btn-sm" target="_blank">Lihat</a>
+                                                    @endforeach            
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -102,12 +104,16 @@
                                                     <label>Portofolio</label>
                                                 </div>
                                                 <div class="col-25">            
-                                                    <a href="#" type="button" class="btn-white2 btn-sm">Lihat</a>
+                                                    @foreach ($porto as $p)
+                                                    <a href="{{$p->file_berkas}}" type="button" class="btn-white2 btn-sm" target="_blank">Lihat</a>
+                                                    @endforeach
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <a href="#" type="button" class="btn-white btn-sm">Lolos</a>
-                                                <a href="#" type="button" class="btn-white btn-sm">Tolak</a>
+                                                @if ($d->status == 'menunggu')
+                                                <a href="/perusahaan/lowongan/pendaftar/lolos/{{$d->id}}/{{$d->lowongan_id}}" type="button" class="btn-white btn-sm">Lolos</a>
+                                                <a href="/perusahaan/lowongan/pendaftar/tolak/{{$d->id}}/{{$d->lowongan_id}}" type="button" class="btn-white btn-sm">Tolak</a>
+                                                @endif
                                             </div>
                                             
                                         </form>
@@ -122,7 +128,7 @@
         </section>
 
 
-
+        @endforeach
         @include('footer_perusahaan')
 
         <script src="{{url('assets/js/vendor/jquery-1.11.2.min.js')}}"></script>

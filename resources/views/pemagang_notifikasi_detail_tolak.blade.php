@@ -65,11 +65,11 @@
                                         <div class="row mt-4">
                                             <div class="col-md-12">
                                             <p style="font-family: Quicksand; font-size: 20px;">Kepada Yth.</p>
-                                                <label class="title_company">Esmeralda Wahyuni</label><br><br><br>
+                                                <label class="title_company">{{$session['nama']}}</label><br><br><br>
                                                 <table>
                                                     <tr>
                                                     <td style="font-size: 20px;">Kami mengucapkan terimakasih banyak atas antusias saudara terhadap program magang perusahaan kami. 
-                                                        Namun, dengan berat hati kami sampaikan, bahwa saudara TIDAK LOLOS dalam tahap administrasi ini dikarenakan ada beberapa
+                                                        Namun, dengan berat hati kami sampaikan, bahwa saudara <b style="color: red">TIDAK LOLOS</b> dalam tahap administrasi ini dikarenakan ada beberapa
                                                         dokumen yang tidak memenuhi standar kualifikasi perusahaan kami. Sekali lagi, kami mohon maaf dan Terimakasih.</td>
                                                     </tr>
                                                 </table>

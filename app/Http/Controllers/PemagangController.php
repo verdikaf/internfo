@@ -113,7 +113,8 @@ class PemagangController extends Controller
     public function notification(Request $request){
         $data['data_apply'] = DB::table('data_apply')
                             ->join('lowongan', 'data_apply.lowongan_id', '=', 'lowongan.id')
-                            ->select(DB::raw('data_apply.*, lowongan.job_title as job'))->get();
+                            ->select(DB::raw('data_apply.*, lowongan.job_title as job'))
+                            ->where('pelamar_id', $request->session()->get('s_id'))->get();
         $data['session']  = array(
             'id'       => $request->session()->get('s_id'),
             'nama'     => $request->session()->get('s_nama'),
@@ -122,11 +123,24 @@ class PemagangController extends Controller
         );
         return view('pemagang_notifikasi', $data);
     }
-    public function notificationDetail(){
-        return view('pemagang_notifikasi_detail');
-    }
-    public function notificationRejectDetail(){
-        return view('pemagang_notifikasi_detail_tolak');
+
+    public function notificationDetail(Request $request, $id, $status){
+        $data['session']  = array(
+            'id'       => $request->session()->get('s_id'),
+            'nama'     => $request->session()->get('s_nama'),
+            'email'   => $request->session()->get('s_email'),
+            'foto'   => $request->session()->get('s_foto')
+        );
+        if ($status == "menunggu") {
+            return view('pemagang_notifikasi_detail', $data);
+        } elseif ($status == "terima") {
+            $data['apply'] = DB::table('lowongan')
+                            ->select(DB::raw('link as link_lolos'))
+                            ->where('id', $id)->get();
+            return view('pemagang_notifikasi_detail_terima', $data);
+        } else {
+            return view('pemagang_notifikasi_detail_tolak', $data);
+        }
     }
     
 }

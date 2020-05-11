@@ -40,6 +40,6 @@ class DashboardController extends Controller
 
     public function signOut(Request $request) {
         $request->session()->flush();
-        return redirect('/login');
+        return redirect('/');
    }
 }
