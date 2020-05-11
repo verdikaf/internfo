@@ -53,7 +53,7 @@
                                             <li><a href="/perusahaan/lowongan">Lowongan</a></li>
                                             <li><a href="/dashboard/perusahaan">{{$session['nama']}}</a></li>
                                             <li class="profile"></li>
-                                            <a href="/dashboard/perusahaan"><img src="/{{$session['foto']}}" alt="{{url('assets/images/logo/user.png')}}" style="width:50px; padding-top: 8px; "></a>  
+                                            <a href="/dashboard/perusahaan"><img src="/{{$session['foto']}}" alt="{{url('assets/images/logo/user.png')}}" class="profile-image"></a>  
                                         </ul>  
                                         
                                     </div>

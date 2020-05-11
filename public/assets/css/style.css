@@ -301,6 +301,7 @@ img {
 }
 .container {
     padding: 2px 16px;
+    
 }
 
 /* CARD for INDEX */
@@ -1384,6 +1385,9 @@ li.profile{
     max-width: 50%;
 }
 
+.profile-image{
+    width: 50px;
+}
 
 
 

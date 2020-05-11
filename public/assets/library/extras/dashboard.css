@@ -1,7 +1,8 @@
 @import url(//fonts.googleapis.com/css?family=Quicksand);
+@import url(//fonts.googleapis.com/css?family=Lato);
 
 body{
-    background-color: #efefef;
+    background-color: #faccff;
 }
 
 .bg-light{
@@ -12,6 +13,12 @@ body{
 
 .bg-primarys{
     background-image: url('/assets/images/logo/dashboard.png');
+    background-size: 100%;
+    height: 642px;
+    background-repeat: no-repeat;
+}
+.bg-primarys2{
+    background-image: url('/assets/images/logo/Header_dashboard3.png');
     background-size: 100%;
     height: 642px;
     background-repeat: no-repeat;
@@ -50,6 +57,12 @@ img.title{
     padding: 0px;
 
 }
+img.title2{
+    /* position: absolute; */
+    width: 80%;
+    padding: 0px;
+
+}
 p.subtitle{
     width: 40%;
     font-family: Quicksand;
@@ -59,6 +72,16 @@ p.subtitle{
     line-height: 37px;
     text-align: center;
     color: #ffffff;
+}
+p.subtitle2{
+    width: 60%;
+    font-family: quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 37px;
+    text-align: center;
+    color: #7c0053;
 }
 .btn-black{
     background: linear-gradient(88.59deg, #5F2C82 -4.62%, rgba(96, 45, 131, 0.54) 185.84%);
@@ -142,7 +165,20 @@ img.title3{
     font-size: 18px;
 }
 
-
+.btn-black3{
+    background: linear-gradient(88.59deg, #5F2C82 -4.62%, rgba(190, 0, 148, 0.54) 185.84%);
+    box-sizing: border-box;
+    border-radius: 100px;
+    color: #ff81ab;
+    width: 30%;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+}
+.btn-black3:hover{
+    color: #fff;
+}
 /* ADMIN PAGE */
 .adminpage{
     margin-top: 100px;
@@ -285,4 +321,19 @@ label{
     border: 3px solid rgb(255, 31, 199);
     border-radius: 100px;
     text-decoration: none;
+}
+
+.sidetitle{
+    font-family: lato;
+    font-size: 60px;
+    font-weight: bold;
+    color: black; 
+    line-height: 1;
+}
+.sidesubtitle{
+    font-family: quicksand;
+    font-size: 20px;
+    color: black; 
+    line-height: 1;    
+    padding-left: 30px;
 }

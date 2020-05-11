@@ -19,8 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 
 
+Route::get('/', 'DashboardController@index');
+
 // LOGIN
-Route::get('/', 'LoginController@index');
+Route::get('/login', 'LoginController@index');
 Route::post('/login/action', 'LoginController@loginAction');
 
 // SIGNUP
