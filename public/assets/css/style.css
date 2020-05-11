@@ -1308,6 +1308,9 @@ input::-ms-input-placeholder {
 /*footer section*/
 .footer{
     background: #1f1f1f;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 .copyright_text p{
     color:#aaa79e;

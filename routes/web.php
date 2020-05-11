@@ -38,6 +38,7 @@ Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
 Route::get('/dashboard/admin/{any}', function () {
     return view('admin');
 })->where('any','.*');
+Route::get('/dashboard/aboutus', 'DashboardController@aboutus');
 
 // CRUD LOWONGAN -- PERUSAHAAN
 Route::get('/perusahaan/lowongan', 'LowonganController@index');
