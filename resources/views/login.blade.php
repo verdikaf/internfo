@@ -32,7 +32,7 @@
             <form action="{{url('/login/action')}}" method="POST">
                <input type="hidden" name="_token" value="{{csrf_token()}}">
                <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="User Name" required v-model="email">
+                  <input type="email" class="form-control" name="email" placeholder="Email" required v-model="email">
                </div>
                <div class="form-group">
                   <input type="password" class="form-control" name="password" placeholder="Password" required v-model="password">

@@ -42,4 +42,14 @@ class DashboardController extends Controller
         $request->session()->flush();
         return redirect('/');
    }
+
+   public function aboutus(Request $request){
+    $data['session']  = array(
+        'id'       => $request->session()->get('s_id'),
+        'nama'     => $request->session()->get('s_nama'),
+        'email'   => $request->session()->get('s_email'),
+        'foto'   => $request->session()->get('s_foto')
+    );
+    return view('aboutUs', $data);
+   }
 }
