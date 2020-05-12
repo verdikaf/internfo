@@ -1383,15 +1383,35 @@ p.titles{
 }
 
 
+.navbar-nav>li {
+    float: left;
+    padding: 5px;
+}
+
 li.profile{
-    position: relative;
-    max-width: 50%;
+    width: 90px;
+    height: 80px;
 }
 
 .profile-image{
     width: 50px;
+    border-radius: 50px;
+    padding-top: 0px;
+}
+.notif-image{
+    width: 30px;
+    border-radius: 50px;
 }
 
+.main_menu_bg .navbar-nav>li>a.profiles-inside{
+    padding-top: 20px !important;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    position: relative;
+    color: #fff;
+    padding: auto;
+}
 
 
 

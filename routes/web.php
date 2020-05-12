@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'DashboardController@index');
+Route::get('/about', 'DashboardController@aboutus');
+Route::get('/aboutus1', 'DashboardController@aboutusPemagang');
+Route::get('/aboutus2', 'DashboardController@aboutusPerusahaan');
 
 // LOGIN
 Route::get('/login', 'LoginController@index');

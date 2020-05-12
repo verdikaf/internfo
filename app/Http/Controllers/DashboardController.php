@@ -46,13 +46,27 @@ class DashboardController extends Controller
         return redirect('/');
    }
 
-   public function aboutus(Request $request){
+   public function aboutus(){
+    return view('aboutUs');
+   }
+
+   public function aboutusPerusahaan(Request $request){
+    $data['title']    = "AboutUs - internfo";
     $data['session']  = array(
         'id'       => $request->session()->get('s_id'),
         'nama'     => $request->session()->get('s_nama'),
-        'email'   => $request->session()->get('s_email'),
-        'foto'   => $request->session()->get('s_foto')
+        'email'   => $request->session()->get('s_email')
     );
-    return view('aboutUs', $data);
-   }
+    return view('aboutUs_perusahaan', $data);
+}
+public function aboutusPemagang(Request $request){
+    $data['title']    = "AboutUs - internfo";
+    $data['session']  = array(
+        'id'       => $request->session()->get('s_id'),
+        'nama'     => $request->session()->get('s_nama'),
+        'email'   => $request->session()->get('s_email')
+    );
+    return view('aboutUs_pemagang', $data);
+}
+   
 }

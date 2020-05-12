@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="{{url('/assets/library/fontawesome/css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{url('/assets/library/extras/dashboard.css')}}">
     <link rel="stylesheet" href="{{url('/assets/css/sidebar.css')}}">
-    <title>{{$title}}</title>
+    <title>INTERNFO</title>
 </head>
 <body>
 
-       <!-- Navigation -->
-       <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
     <div class="container">
         <img src="{{url('/assets/images/logo/Inferno_Type_whi.png')}}" alt="" class="headlogo" style="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,14 +42,13 @@
   </nav>
 
   <!-- Header -->
-  <header class="bg-primarys py-5 mb-5">
+  <header class="bg-primarys2 py-5 mb-5">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
             <center>
-                    <img src="{{url('/assets/images/logo/Inferno_type_whi.png')}}" alt="" class="title"><br><br>
-                    <p class="subtitle">Mari Ciptakan lapangan Pekerjaan dengan bantuan Internfo</p>
-                    <a href="/pemagang" type="button" class="btn btn-black">Lihat</a>
+                <p class="subtitle2" style="padding-bottom:0px">Welcome to</p><br>
+                <img src="{{url('/assets/images/logo/Inferno_type_whi.png')}}" alt="" class="titleboutus">        
             </center>
         </div>
       </div>
@@ -57,26 +56,58 @@
   </header>
 
   <!-- Page Content -->
-  <div class="container">
-
+  <div class="container-fluid wrapaboutus">
     <div class="row">
       <div class="col-md-6 mb-5">
-        <center> 
-            <img src="{{url('/assets/images/logo/hire.svg')}}" alt="" class="title2"><br><br>
-        </center>
+            <p class="sidetitle-aboutus">Tujuan Kami</p>
+            <br>
+            <p class="sidesubtitle-aboutus">Tujuan kami hadir disini adalah untuk mempermudah para 
+                mahasiswa yang kesulitan mencari tempat yang memang menyediakan program magang</p>
+            <br>
       </div>
       <div class="col-md-6 mb-5">
-            <img src="{{url('/assets/images/logo/tentang.png')}}" alt="" class="title3"><br><br>
-            <a href="/aboutus1" type="button" class="btn btn-black2">About Us</a>
+            <p class="sidetitle-aboutus">Fokus Kami</p>
+            <br>
+            <p class="sidesubtitle-aboutus">Terus melakukan pengembangan inovasi agar mempermudah 
+              masyarakat dalam melakukan kegiatan</p>
+            <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid wrapaboutus2">
+  <p class="sidetitle-aboutus" style="margin-bottom:50px">Team Kami</p>
+    <div class="row">
+      <div class="col-md-4 mb-5">
+      <center>
+            <img src="assets/images/logo/Asset 2.png" class="circular-square" alt="">
+            <p class="sideteam-aboutus">Verdika Fajar S.</p>
+      </center>
+            
+            <br>
+      </div>
+      <div class="col-md-4 mb-5">
+      <center>
+            <img src="assets/images/logo/Asset 2.png" class="circular-square" alt="">
+            <p class="sideteam-aboutus">Dyah Ayu P.</p>
+      </center>
+      </div>
+      <div class="col-md-4 mb-5">
+      <center>
+            <img src="assets/images/logo/Asset 2.png" class="circular-square" alt="">
+            <p class="sideteam-aboutus">Galang indra V.</p>
+      </center>
       </div>
     </div>
   </div>
   <!-- /.container -->
 
+  
+
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; Internfo 2020</p>
     </div>
     <!-- /.container -->
   </footer>

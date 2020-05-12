@@ -5,6 +5,11 @@ body{
     background-color: #faccff;
 }
 
+.bodyv2{
+    background-color: #b40069;
+}
+
+
 .bg-light{
     /* background: linear-gradient(88.59deg, #5F2C82 -4.62%, rgba(96, 45, 131, 0.54) 185.84%); */
     background-image: url('/assets/images/logo/Header_dashboard.png');
@@ -18,7 +23,7 @@ body{
     background-repeat: no-repeat;
 }
 .bg-primarys2{
-    background-image: url('/assets/images/logo/Header_dashboard3.png');
+    background-image: url('/assets/images/logo/dashboard.png');
     background-size: 100%;
     height: 642px;
     background-repeat: no-repeat;
@@ -57,12 +62,7 @@ img.title{
     padding: 0px;
 
 }
-img.title2{
-    /* position: absolute; */
-    width: 80%;
-    padding: 0px;
 
-}
 p.subtitle{
     width: 40%;
     font-family: Quicksand;
@@ -81,7 +81,7 @@ p.subtitle2{
     font-size: 40px;
     line-height: 37px;
     text-align: center;
-    color: #7c0053;
+    color: #ebebeb;
 }
 .btn-black{
     background: linear-gradient(88.59deg, #5F2C82 -4.62%, rgba(96, 45, 131, 0.54) 185.84%);
@@ -140,7 +140,10 @@ img.title3{
     width: 80%;
     padding-top: 15%;
     align-items: baseline;
-
+}
+img.titleboutus{
+    /* position: absolute; */
+    width: 80%;
 }
 .btn-black2{
     background: linear-gradient(88.59deg, #5F2C82 -4.62%, rgba(96, 45, 131, 0.54) 185.84%);
@@ -337,3 +340,50 @@ label{
     line-height: 1;    
     padding-left: 30px;
 }
+
+
+/* ABOUT US */
+.wrapaboutus{
+    background-color: rgb(180, 0, 105);
+}
+
+.wrapaboutus2{
+    background-color: rgb(110, 0, 64);
+
+}
+
+.sidetitle-aboutus{
+    font-family: lato;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255); 
+    line-height: 1;
+    padding-top: 50px;
+    text-align: center;
+}
+.sidesubtitle-aboutus{
+    font-family: quicksand;
+    font-size: 20px;
+    color: rgb(255, 236, 250); 
+    line-height: 1;    
+    padding-left: 30px;
+    margin-top: 0px;
+    text-align: center;
+}
+.sideteam-aboutus{
+    font-family: lato;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 255, 255); 
+    line-height: 1;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.circular-square {
+    width: 50%;
+    border-radius: 50%;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }

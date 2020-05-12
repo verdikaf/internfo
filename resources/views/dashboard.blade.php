@@ -21,10 +21,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/perusahaan/lowongan">Lowongan</a>
+            <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="/about">About Us</a>
           </li>
           <li class="nav-item">
             <a href="{{url('/login')}}" type="button" class="btn btn-logout">Login</a>
@@ -40,7 +40,7 @@
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
             <center>
-                    <img src="{{url('/assets/images/logo/Inferno_type_co.png')}}" alt="" class="title2"><br><br>
+                    <img src="{{url('/assets/images/logo/Inferno_type_whi.png')}}" alt="" class="title2"><br><br>
                     <p class="subtitle2">Situs pencarian Magang untuk mahasiswa tervalid</p>
                     
             </center>

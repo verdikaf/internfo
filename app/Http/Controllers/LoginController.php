@@ -86,9 +86,9 @@ class LoginController extends Controller
                 $request->input('email'),
                 $request->input('password')
 			]);
-			return redirect('/');
+			return redirect('/login');
 		}else {
-			return redirect('/');
+			return redirect('/login');
         }
     }
     
