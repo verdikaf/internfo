@@ -63,7 +63,7 @@
       </div>
       <div class="col-md-6 mb-5">
             <img src="{{url('/assets/images/logo/tentang.png')}}" alt="" class="title3"><br><br>
-            <a href="#" type="button" class="btn btn-black2">About Us</a>
+            <a href="/aboutus2" type="button" class="btn btn-black2">About Us</a>
       </div>
     </div>
   </div>
