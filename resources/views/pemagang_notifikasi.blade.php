@@ -64,6 +64,9 @@
                                             <div class="row">
                                                 <div class="col-20">
                                                     <img src="{{url('assets/images/logo/notification.png')}}" alt="Avatar" style="width:30%">
+                                                </div> -->
+                                                <!-- <div class="col-50">
+                                                    <label class="title_detail2">{{$d->tanggal}}</label>
                                                 </div>
                                                 <div class="col-60">
                                                     <div class="row">
@@ -83,8 +86,22 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-20">
-                                                    <a href="/pemagang/notification/detail/{{$d->lowongan_id}}/{{$d->status}}" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
+                                                <div class="col-50">
+                                                    <label class="title_detail">{{$d->job}}</label>
+                                                </div>
+                                                <div class="col-50">
+                                                    <label class="title_detail">{{$d->status}}</label>
+                                                </div> -->
+                                                <div class="col-25">
+                                                    <label class="date_detail">{{$d->tanggal}}</label><br>
+                                                    <label class="title_detail">{{$d->job}}</label>
+                                                    <h4 class="title_company">{{$d->perusahaan}}</h4>
+                                                </div>
+                                                <div class="col-50s">
+                                                    <h4 class="title_company">Status : {{$d->status}}</h4>
+                                                </div>
+                                                <div class="col-25">
+                                                <a href="/pemagang/notification/detail/{{$d->lowongan_id}}/{{$d->status}}" type="button" class="btn-black btn-sm"><img src="{{url('assets/images/logo/detail.png')}}" alt="" class="detail_images"></a>
                                                 </div>
                                             </div>
                                         </form>

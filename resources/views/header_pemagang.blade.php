@@ -50,11 +50,17 @@
 
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li><a href="/pemagang">Job</a></li>
-                                            <li><a href="/pemagang/notification">Notification</a></li>
-                                            <li><a href="/dashboard/pemagang">{{$session['nama']}}</a></li>
-                                            <li class="profile"></li>
-                                            <a href="/dashboard/pemagang"><img src="/{{$session['foto']}}" alt="" style="width:50px; padding-top: 8px; "></a>  
+                                            <li><a href="/pemagang">Jobs</a></li>
+                                            <li><a href="/aboutus1">About Us</a></li>
+                                            <li>
+                                                <a href="/pemagang/notification" style="padding-right:0px; margin-right: 0px"><img src="{{url('assets/images/logo/notification.png')}}" alt="" class="notif-image"></a> 
+                                            </li>
+                                            <li class="profile">
+                                                <a href="/dashboard/pemagang" style="padding-top:10px"><img src="/{{$session['foto']}}" alt="" class="profile-image"></a> 
+                                            </li>
+                                            
+                                            <br>
+                                            
                                         </ul>  
                                         
                                     </div>

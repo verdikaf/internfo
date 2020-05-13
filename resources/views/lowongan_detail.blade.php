@@ -94,7 +94,6 @@
                                         </div>
                                             <div class="row">
                                             <a href="/perusahaan/lowongan/pendaftar/{{$k->id}}" type="button" class="btn-white btn-sm">Pendaftar</a>
-                                                <a href="#" type="button" class="btn-white btn-sm">Tutup</a>
                                             </div>
                                             
                                         </form>

@@ -64,8 +64,8 @@
                                             <input type="hidden" name="pelamar" value="{{$session['nama']}}">
                                             <div class="row mb-4">
                                                 <div class="col-md-6">
-                                                    <label class="title_intern">{{$l->nama_perusahaan}}</label>
-                                                    <p style="font-family: Quicksand; font-size: 20px; margin-top: -15px;">{{$l->lokasi}}</p>
+                                                    <label class="title_intern">{{$l->job_title}}</label>
+                                                    <p style="font-family: Quicksand; font-size: 20px; margin-top: -15px;">{{$l->nama_perusahaan}}</p> <p style="font-family: Quicksand; font-size: 20px; margin-top: -15px;">{{$l->lokasi}}</p>
                                                 </div>
                                                 <div class="col-md-6 text-right">
                                                     <img src="/{{$l->foto}}" width="100">

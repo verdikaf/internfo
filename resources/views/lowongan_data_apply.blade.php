@@ -54,7 +54,7 @@
                         <div class="col-sm-12 ">
 
                             <div class="container_card">
-                                <div class="cardnew">
+                                <div class="card7">
                                     <div class="form">
                                         <form action="/action_page.php">
                                             <div class="row">
