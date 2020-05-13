@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{url('/assets/library/fontawesome/css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{url('/assets/library/extras/dashboard.css')}}">
     <link rel="stylesheet" href="{{url('/assets/css/sidebar.css')}}">
-    <title>{{$title}}</title>
+    <title>INTERNFO</title>
 </head>
 <body>
 
@@ -21,16 +21,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/perusahaan/lowongan">Lowongan</a>
+            <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/aboutus2">About Us</a>
+            <a class="nav-link" href="/about">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">{{$session['nama']}}</a>
-          </li>
-          <li class="nav-item">
-            <a href="{{url('/sign-out')}}" type="button" class="btn btn-logout">Logout</a>
+            <a href="{{url('/login')}}" type="button" class="btn btn-logout">Login</a>
           </li>
         </ul>
       </div>
@@ -38,14 +35,14 @@
   </nav>
 
   <!-- Header -->
-  <header class="bg-primarys py-5 mb-5">
+  <header class="bg-primarys2 py-5 mb-5">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
             <center>
-                    <img src="{{url('/assets/images/logo/Inferno_type_whi.png')}}" alt="" class="title"><br><br>
-                    <p class="subtitle">Mari Ciptakan lapangan Pekerjaan dengan bantuan Internfo</p>
-                    <a href="/perusahaan/lowongan/add" type="button" class="btn btn-black" style="width:200px">Buat Lowongan</a>
+                    <img src="{{url('/assets/images/logo/Inferno_type_whi.png')}}" alt="" class="title2"><br><br>
+                    <p class="subtitle2">Situs pencarian Magang untuk mahasiswa tervalid</p>
+                    
             </center>
         </div>
       </div>
@@ -57,13 +54,16 @@
 
     <div class="row">
       <div class="col-md-6 mb-5">
+            <p class="sidetitle">Apa Itu <br> Internfo ?</p>
+            <br>
+            <p class="sidesubtitle">Inferno adalah Website untuk menjembatani mahasiswa yang akan magang dengan perusahaan.</p>
+            <br>
+            <a href="/login" type="button" class="btn btn-black3" style="margin-left:30px">Sign In</a><a href="/signup" type="button" class="btn btn-black3" style="margin-left:30px">Sign Up</a>
+      </div>
+      <div class="col-md-6 mb-5">
         <center> 
             <img src="{{url('/assets/images/logo/hire.svg')}}" alt="" class="title2"><br><br>
         </center>
-      </div>
-      <div class="col-md-6 mb-5">
-            <img src="{{url('/assets/images/logo/tentang.png')}}" alt="" class="title3"><br><br>
-            <a href="/aboutus2" type="button" class="btn btn-black2">About Us</a>
       </div>
     </div>
   </div>
@@ -72,7 +72,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">Copyright &copy; Internfo 2020</p>
     </div>
     <!-- /.container -->
   </footer>

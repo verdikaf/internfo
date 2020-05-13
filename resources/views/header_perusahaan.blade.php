@@ -52,8 +52,9 @@
                                         <ul class="nav navbar-nav navbar-right">
                                             <li><a href="/perusahaan/lowongan">Lowongan</a></li>
                                             <li><a href="/dashboard/perusahaan">{{$session['nama']}}</a></li>
-                                            <li class="profile"></li>
-                                            <a href="/dashboard/perusahaan"><img src="/{{$session['foto']}}" alt="{{url('assets/images/logo/user.png')}}" style="width:50px; padding-top: 8px; "></a>  
+                                            <li class="profile">
+                                                <a href="/dashboard/pemagang" style="padding-top:10px"><img src="/{{$session['foto']}}" alt="" class="profile-image"></a> 
+                                            </li>    
                                         </ul>  
                                         
                                     </div>
