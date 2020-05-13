@@ -43,7 +43,6 @@
         <![endif]-->
 
         @include('header_perusahaan')
-
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">

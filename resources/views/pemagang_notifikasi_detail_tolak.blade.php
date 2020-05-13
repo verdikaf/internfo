@@ -44,7 +44,7 @@
 
         @include('header_pemagang')
 
-
+    <div id="big_container">
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
@@ -101,6 +101,6 @@
 
         <script src="{{url('assets/js/plugins.js')}}"></script>
         <script src="{{url('assets/js/main.js')}}"></script>
-
+    </div>
     </body>
 </html>

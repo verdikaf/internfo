@@ -50,7 +50,7 @@
 
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li><a href="/pemagang/index">Job</a></li>
+                                            <li><a href="/pemagang">Job</a></li>
                                             <li><a href="/pemagang/notification">Notification</a></li>
                                             <li><a href="/dashboard/pemagang">{{$session['nama']}}</a></li>
                                             <li class="profile"></li>

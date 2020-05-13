@@ -43,7 +43,7 @@
         <![endif]-->
 
         @include('header_perusahaan')
-
+    <div id="big_container">
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
@@ -53,7 +53,7 @@
                         <div class="col-sm-12 ">
 
                             <div class="container_card">
-                                <div class="card">
+                                <div class="cardnew">
                                     <div class="form">
                                         <form action="/perusahaan/lowongan/add/proses" method="post" enctype="multipart/form-data">
                                         {{ csrf_field() }}
@@ -97,6 +97,14 @@
                                                 </div>
                                             </div>
                                             <div class="row">
+                                                <div class="col-25">
+                                                    <label>Link</label>
+                                                </div>
+                                                <div class="col-75">
+                                                    <input type="text" id="link" name="link" placeholder="Link Tes..." required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
                                                 <input type="submit" value="Add Data">
                                             </div>
                                         </form>
@@ -117,9 +125,9 @@
                 <div class="main_footer">
                     <div class="row">
 
-                        <div class="col-sm-6 col-xs-12">
+                        <div class="col-sm-12 col-xs-12">
                             <div class="copyright_text">
-                                <p class=" wow fadeInRight" data-wow-duration="1s">Made by <a href="">Your Website</a>2016. All Rights Reserved</p>
+                                <p class="m-0 text-center text-white">Made by <a href="">Internfo</a>2016. All Rights Reserved</p>
                             </div>
                         </div>
 
@@ -146,6 +154,6 @@
 
         <script src="{{url('assets/js/plugins.js')}}"></script>
         <script src="{{url('assets/js/main.js')}}"></script>
-
+</div>
     </body>
 </html>

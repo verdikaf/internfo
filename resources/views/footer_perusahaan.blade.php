@@ -28,9 +28,9 @@
                 <div class="main_footer">
                     <div class="row">
 
-                        <div class="col-sm-6 col-xs-12">
+                        <div class="col-sm-12 col-xs-12">
                             <div class="copyright_text">
-                                <p class=" wow fadeInRight" data-wow-duration="1s">Made by Internfo Co. 2020. All Rights Reserved</p>
+                                <p class="m-0 text-center text-white">Made by Internfo Co. 2020. All Rights Reserved</p>
                             </div>
                         </div>
 
