@@ -84,6 +84,14 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-25">
+                                                    <label>Link</label>
+                                                </div>
+                                                <div class="col-75">
+                                                    <input type="text" id="link" name="link" placeholder="Link Tes..." required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-25">
                                                     <label>Bidang Profesi</label>
                                                 </div>
                                                 <div class="col-75 ">
@@ -96,14 +104,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-25">
-                                                    <label>Link</label>
-                                                </div>
-                                                <div class="col-75">
-                                                    <input type="text" id="link" name="link" placeholder="Link Tes..." required>
-                                                </div>
-                                            </div>
+                                            
                                             <div class="row">
                                                 <input type="submit" value="Add Data">
                                             </div>

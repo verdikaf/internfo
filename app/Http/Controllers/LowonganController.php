@@ -35,10 +35,11 @@ class LowonganController extends Controller
         $method = $request->method();
         if($method == "POST") {
 
-            DB::insert("INSERT INTO lowongan (job_title, deskripsi, lokasi, perusahaan_id, bidang_profesi_id) VALUES ( ?, ?, ?, ?, ?)", [
+            DB::insert("INSERT INTO lowongan (job_title, deskripsi, lokasi, link, perusahaan_id, bidang_profesi_id) VALUES ( ?, ?, ?, ?, ?, ?)", [
                 $request->input('job_title'),
                 $request->input('deskripsi'),
                 $request->input('lokasi'),
+                $request->input('link'),
                 $request->session()->get('s_id'),
                 $request->input('bidang_profesi_id')
             ]);
