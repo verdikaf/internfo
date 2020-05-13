@@ -10,7 +10,9 @@ class LowonganController extends Controller
 {
     
     public function index(Request $request){
-        $data['lowongan'] = DB::table('lowongan')->get();
+        $data['lowongan'] = DB::table('lowongan')
+        ->where('perusahaan_id', $request->session()->get('s_id'))
+        ->get();
         $data['session']  = array(
             'id'       => $request->session()->get('s_id'),
             'nama'     => $request->session()->get('s_nama'),
@@ -35,12 +37,13 @@ class LowonganController extends Controller
         $method = $request->method();
         if($method == "POST") {
 
-            DB::insert("INSERT INTO lowongan (job_title, deskripsi, lokasi, perusahaan_id, bidang_profesi_id) VALUES ( ?, ?, ?, ?, ?)", [
+            DB::insert("INSERT INTO lowongan (job_title, deskripsi, lokasi, perusahaan_id, bidang_profesi_id, link) VALUES ( ?, ?, ?, ?, ?, ?)", [
                 $request->input('job_title'),
                 $request->input('deskripsi'),
                 $request->input('lokasi'),
                 $request->session()->get('s_id'),
-                $request->input('bidang_profesi_id')
+                $request->input('bidang_profesi_id'),
+                $request->input('link')
             ]);
             return redirect('/perusahaan/lowongan');
         } else {

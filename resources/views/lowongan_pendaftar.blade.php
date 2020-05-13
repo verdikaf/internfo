@@ -61,7 +61,7 @@
                                         <form action="/action_page.php">
                                             <div class="row">
                                                 <div class="col-15">
-                                                    <img src="/{{$d->foto}}" alt="" class="profile">
+                                                    <img src="/{{$d->foto}}" alt="" class="profile" style="height: 80px;">
                                                 </div>
                                                 <div class="col-60">
                                                     <label class="title_detail2">{{$d->pelamar}}</label>

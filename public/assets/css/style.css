@@ -285,7 +285,7 @@ ul{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 1120px;
-    height: 550px;
+    height: 650px;
     float: left;
     margin: 10px 10px 10px 10px;
     box-sizing: border-box;
@@ -421,6 +421,16 @@ img {
     margin-top: 0px;
 }
 
+.date_detail{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    color:#ed145b;
+}
+
 .title_detail2{
     font-family: Quicksand;
     font-style: normal;
@@ -429,11 +439,19 @@ img {
     margin-top: 0px;
 }
 
+.title_detail3{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0px;
+}
+
 .title_intern{
     font-family: Quicksand;
     font-style: normal;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 30px;
     margin-top: -15px;
 }
 
@@ -590,6 +608,18 @@ img {
     margin-left: 100px;
 }
 
+.card7 {
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    transition: 0.3s;
+    width: 1120px;
+    height: 600px;
+    float: left;
+    margin: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff; 
+}
+
 /* FORM */
 input[type=text], select, textarea {
   width: 100%;
@@ -653,11 +683,24 @@ input[type=submit]:hover {
   width: 25%;
   margin-top: 6px;
 }
+.col-25s {
+    float: left;
+    width: 25%;
+    text-align: left;
+    margin-top: 40px;
+  }
 
 .col-50 {
     float: left;
     width: 50%;
     margin-top: 6px;
+  }
+  
+  .col-50s {
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-top: 40px;
   }
 
 .col-60 {
@@ -1308,8 +1351,8 @@ input::-ms-input-placeholder {
 /*footer section*/
 .footer{
     background: #1f1f1f;
-    position: absolute;
-    bottom: 0px;
+    /* position: absolute;
+    bottom: 0px; */
     width: 100%;
 }
 .copyright_text p{
@@ -1376,7 +1419,7 @@ input::-ms-input-placeholder {
 }
 
 p.titles{
-    font-size: 100px;
+    font-size: 65px;
     line-height: 20.5rem;
     margin-left: 6.45rem;
     color:#fff;
@@ -1395,6 +1438,7 @@ li.profile{
 
 .profile-image{
     width: 50px;
+    height: 50px;
     border-radius: 50px;
     padding-top: 0px;
 }

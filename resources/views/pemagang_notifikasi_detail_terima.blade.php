@@ -78,7 +78,7 @@
                                         </div><br><br>
                                         <div class="row">
                                             @foreach($apply as $d)
-                                                <center><a href="{{$d->link_lolos}}" target='blank'>LINK LOLOS</a></center>
+                                                <center><a href="https:\\{{$d->link_lolos}}" target="_blank">LINK LOLOS</a></center>
                                             @endforeach
                                         </div>
                                     </div>
