@@ -10,7 +10,9 @@ class LowonganController extends Controller
 {
     
     public function index(Request $request){
-        $data['lowongan'] = DB::table('lowongan')->get();
+        $data['lowongan'] = DB::table('lowongan')
+                            ->where('perusahaan_id',$request->session()->get('s_id'))
+                            ->get();
         $data['session']  = array(
             'id'       => $request->session()->get('s_id'),
             'nama'     => $request->session()->get('s_nama'),
