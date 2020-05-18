@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    public function index(){
+        return view('dashboard');
+    }
     public function pemagang(Request $request){
         $data['title']    = "Dashboard - internfo";
         $data['session']  = array(
@@ -42,4 +45,28 @@ class DashboardController extends Controller
         $request->session()->flush();
         return redirect('/');
    }
+
+   public function aboutus(){
+    return view('aboutUs');
+   }
+
+   public function aboutusPerusahaan(Request $request){
+    $data['title']    = "AboutUs - internfo";
+    $data['session']  = array(
+        'id'       => $request->session()->get('s_id'),
+        'nama'     => $request->session()->get('s_nama'),
+        'email'   => $request->session()->get('s_email')
+    );
+    return view('aboutUs_perusahaan', $data);
+}
+public function aboutusPemagang(Request $request){
+    $data['title']    = "AboutUs - internfo";
+    $data['session']  = array(
+        'id'       => $request->session()->get('s_id'),
+        'nama'     => $request->session()->get('s_nama'),
+        'email'   => $request->session()->get('s_email')
+    );
+    return view('aboutUs_pemagang', $data);
+}
+   
 }

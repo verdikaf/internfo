@@ -37,13 +37,13 @@
         <link rel="stylesheet" href="{{url('/assets/style.css')}}"> -->
     
     </head>
-    <body data-spy="scroll" data-target=".navbar-collapse">
+    <body data-target=".navbar-collapse">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         @include('header_perusahaan')
-
+    
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
@@ -61,7 +61,7 @@
                                         <form action="/action_page.php">
                                             <div class="row">
                                                 <div class="col-15">
-                                                    <img src="/{{$d->foto}}" alt="" class="profile">
+                                                    <img src="/{{$d->foto}}" alt="" class="profile" style="height: 80px;">
                                                 </div>
                                                 <div class="col-60">
                                                     <label class="title_detail2">{{$d->pelamar}}</label>

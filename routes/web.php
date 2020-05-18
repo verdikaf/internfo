@@ -19,8 +19,13 @@ use Illuminate\Support\Facades\Route;
 
 
 
+Route::get('/', 'DashboardController@index');
+Route::get('/about', 'DashboardController@aboutus');
+Route::get('/aboutus1', 'DashboardController@aboutusPemagang');
+Route::get('/aboutus2', 'DashboardController@aboutusPerusahaan');
+
 // LOGIN
-Route::get('/', 'LoginController@index');
+Route::get('/login', 'LoginController@index');
 Route::post('/login/action', 'LoginController@loginAction');
 
 // SIGNUP
@@ -36,6 +41,7 @@ Route::get('/dashboard/pemagang', 'DashboardController@pemagang');
 Route::get('/dashboard/admin/{any}', function () {
     return view('admin');
 })->where('any','.*');
+Route::get('/dashboard/aboutus', 'DashboardController@aboutus');
 
 // CRUD LOWONGAN -- PERUSAHAAN
 Route::get('/perusahaan/lowongan', 'LowonganController@index');

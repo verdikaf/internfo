@@ -81,10 +81,13 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </section>
 
         @include('footer_perusahaan')
+
+        
 
 
         <script src="{{url('assets/js/vendor/jquery-1.11.2.min.js')}}"></script>

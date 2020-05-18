@@ -80,7 +80,7 @@ class PemagangController extends Controller
                                 'pelamar_id' => $request->session()->get('s_id')
                                 ])
                             ->get();
-        echo $data['data_apply'];
+        // echo $data['data_apply'];
         return view('pemagang_requirements', $data);
     }
 

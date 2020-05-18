@@ -47,6 +47,7 @@
         @foreach($lowongan as $k)
         
         {{ csrf_field() }}
+    <div id="big_container">
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
@@ -93,7 +94,6 @@
                                         </div>
                                             <div class="row">
                                             <a href="/perusahaan/lowongan/pendaftar/{{$k->id}}" type="button" class="btn-white btn-sm">Pendaftar</a>
-                                                <a href="#" type="button" class="btn-white btn-sm">Tutup</a>
                                             </div>
                                             
                                         </form>
@@ -120,6 +120,7 @@
 
         <script src="{{url('assets/js/plugins.js')}}"></script>
         <script src="{{url('assets/js/main.js')}}"></script>
-
+        
+    </div>   
     </body>
 </html>

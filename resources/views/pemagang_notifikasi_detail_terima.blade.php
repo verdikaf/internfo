@@ -44,7 +44,7 @@
 
         @include('header_pemagang')
 
-
+    <div id="big_container">
         <section id="home" class="home" >
             <div class="overlay">
                 <div class="container">
@@ -78,7 +78,7 @@
                                         </div><br><br>
                                         <div class="row">
                                             @foreach($apply as $d)
-                                                <center><a href="{{$d->link_lolos}}" target='blank'>LINK LOLOS</a></center>
+                                                <center><a href="https:\\{{$d->link_lolos}}" target="_blank">LINK LOLOS</a></center>
                                             @endforeach
                                         </div>
                                     </div>
@@ -105,6 +105,6 @@
 
         <script src="{{url('assets/js/plugins.js')}}"></script>
         <script src="{{url('assets/js/main.js')}}"></script>
-
+    </div>
     </body>
 </html>

@@ -24,7 +24,7 @@
             <a class="nav-link" href="/perusahaan/lowongan">Lowongan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="/aboutus2">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">{{$session['nama']}}</a>
@@ -63,7 +63,7 @@
       </div>
       <div class="col-md-6 mb-5">
             <img src="{{url('/assets/images/logo/tentang.png')}}" alt="" class="title3"><br><br>
-            <a href="#" type="button" class="btn btn-black2">About Us</a>
+            <a href="/aboutus2" type="button" class="btn btn-black2">About Us</a>
       </div>
     </div>
   </div>

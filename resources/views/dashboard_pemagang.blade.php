@@ -11,8 +11,8 @@
 </head>
 <body>
 
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
+       <!-- Navigation -->
+       <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
     <div class="container">
         <img src="{{url('/assets/images/logo/Inferno_Type_whi.png')}}" alt="" class="headlogo" style="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,11 +20,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+          
           <li class="nav-item">
-            <a class="nav-link" href="/pemagang">Internship</a>
+            <a class="nav-link" href="/dashboard/pemagang">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="/pemagang">Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutus1">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">{{$session['nama']}}</a>
@@ -63,7 +67,7 @@
       </div>
       <div class="col-md-6 mb-5">
             <img src="{{url('/assets/images/logo/tentang.png')}}" alt="" class="title3"><br><br>
-            <a href="/signup" type="button" class="btn btn-black2">About Us</a>
+            <a href="/aboutus1" type="button" class="btn btn-black2">About Us</a>
       </div>
     </div>
   </div>
